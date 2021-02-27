@@ -35,7 +35,7 @@ ______
 - NearFutureProps_0_6_4
 ______
 
-> Supported Mods (for module in MFD screen page, (The pages of these modules are already embedded in the cfg file)
+> Supported Mods for module in MFD screen page, (The pages of these modules are already embedded in the cfg file)
 
 | MODULE | TESTED|
 |:---|:---|
