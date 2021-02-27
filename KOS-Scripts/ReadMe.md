@@ -19,10 +19,13 @@
    ```
    works that way : myConstructorObject\["setTXT"](parameter).
    
-Completely inspired by [SMOKETEER](https://github.com/smoketeer/fall) , and his FALL script.   
+Completely inspired by [SMOKETEER](https://github.com/smoketeer/fall) , and his FALL script.
+_____
 
 ### INSTALLS
-Copy Folders or scripts in *Ships/Script/*  
+Copy Folders or scripts in *Ships/Script/* 
+
+___
 
 ### LICENCE
 Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)
