@@ -27,3 +27,12 @@ ______
 - kOS-v1.2.1.0 or greater
 - kOSPropMonitor-1.7.1.38388
 - NearFutureProps_0_6_4
+
+______
+
+## Thanks to
+Alexustas For these beautiful PROPS packs (ASET)
+Mihara for its original RasterPropMonitor mod, and thank MOARdV and JonnyOThan For its maintenance.
+dsonbill for its very practical kOS<-->RPM interface for Kerbal Space Program
+KOS originally created by Nivekk, Thanks to all the contributors to this mod
+
