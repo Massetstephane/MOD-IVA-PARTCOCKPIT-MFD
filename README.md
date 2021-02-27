@@ -15,7 +15,7 @@ using a modified mu file from ASET Props (v1.5)
 - #### Updated MFD (animated buttons, backlight buttons, brightness buttons setup screen)
 - #### MFD specials dedicated to KOS
 - #### IVA and Cockpit for KSP (Work in progress)
-
+______
 
 > required Mods
 - ASET_Avionics-2.1
