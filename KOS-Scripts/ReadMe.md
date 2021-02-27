@@ -7,13 +7,13 @@
   
   ```javascript
   return lexicon(
-        "Reset", setTXTFull@,
-        "setTXT", setTxT@,
-        "getTXT", getTxT@,
-        "setSTA", setSta@,
-        "getSTA", getSta@,
-        "initLF", initLab@,
-        "dele", dele@,
+        "Reset", SetTXTFull@,
+        "setTXT", SsetTxT@,
+        "getTXT", GetTxT@,
+        "setSTA", SetSta@,
+        "getSTA", GetSta@,
+        "initLF", InitLab@,
+        "dele", Dele@,
         "Monitor", CurentMoni@        
     ).
    ```
