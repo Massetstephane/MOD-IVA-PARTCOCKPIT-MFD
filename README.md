@@ -7,15 +7,15 @@
 using a modified mu file from ASET Props (v1.5)
 - ALCORMFD40X20.mu
 - MFD60x30.mu
-#### These models are independent and do not affect the original ASET mod
+#### These models and IVA are independent and do not affect the required MODS
 
-
-> "ASET Props" by Alexustas is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
-   More info: http://creativecommons.org/licenses/by-nc-sa/3.0/
-   
+> "ASET Props" by Alexustas licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
+  
 > Near Future Props v0.6.4 by Nertea License (http://creativecommons.org/licenses/by-nc-sa/4.0/legalcode)
 
+> DE_IVAExtension by DemonEin licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
 
+Features
 - #### This MODS give Full IVA and Cockpit PART using ASET and JSI RasterPropMonitor
 - #### Updated MFD (animated buttons, backlight buttons, brightness buttons setup screen)
 - #### Mfd page revisited
@@ -45,7 +45,10 @@ ______
 ______
 
 > INSTALLATION
-Copy the folder **MA_IVASPARTS** into your KSP GameData directory
+
+- Copy the folder **MA_IVASPARTS** into your KSP GameData directory
+
+- This mod is not compatible with **DE_IVAExtension-v.1.0.2** and **IVA_ASET_MAKING_HISTORY-1.0**
 
 ## Thanks to
 
@@ -59,4 +62,4 @@ Copy the folder **MA_IVASPARTS** into your KSP GameData directory
 
 **Nertea** ``for are pack Near Future Props v0.6.4``
 
-
+``Completely inspired by DE_IVAExtension created by`` **DemonEin** 
