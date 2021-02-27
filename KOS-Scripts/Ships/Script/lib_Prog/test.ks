@@ -1,4 +1,5 @@
 //:Juste pour voir si le prog est ajouter
+// Lic. Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)
 clearScreen.
 print "Ca marche".
 
