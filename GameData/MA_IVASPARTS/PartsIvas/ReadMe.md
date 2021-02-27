@@ -3,9 +3,13 @@
 
 >_________________
 
-Mk1-3Pod_MOD   -> IVA instruments done, IVA part Done, Part not defined yet
+Mk1-3Pod           -> IVA instrument done, IVA part Done, Part not defined yet
 
-mk1Cockpit_MOD -> IVA instrument updated (Mfd KOS)
+mk1Cockpit         -> IVA instrument updated (Mfd KOS)
+
+mk2CockpitStandard -> IVA instrument + KOS done, IVA part work in progress, Cockpit Part work in progress
+
+
 
 
 
