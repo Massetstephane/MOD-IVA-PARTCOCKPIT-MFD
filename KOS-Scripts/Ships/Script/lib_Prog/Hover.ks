@@ -3,7 +3,7 @@
 // buttons work now, added input altitude & landing Mode & new library
 // Testing action and event in selected part module by kos tag
 // Copyright © 2021 Masset Stephane 
-// Lic. MIT
+// Lic. Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)
 
 parameter inpuTaltitude is 0.                         				// base height if nothing enter
 // ---- My user functions in library folder ----
