@@ -1,4 +1,5 @@
 **Hover.ks**
+
  *Need standard library* **KSLib** *To function properly*
  *Need* **lib_KpmAddons.ks**, **lib_FlashString.ks**, **lib_MovePart.ks** *scripts.*
  
@@ -10,7 +11,7 @@ set AeroBreak to MovPartOBJ("KosAerofrein","ModuleAeroSurface", "activer").
 set LandL to MovPartOBJ("LandL", "ModuleLight", "activer l'éclairage").
 set CtrlLight to MovPartOBJ("CtrlLandL", "ModuleRoboticController", "Activer la lecture").
 ```
-- MovPartOBJ("*is KOSTAG*", "*is Part Module*", "*Event or Action name*"
+- MovPartOBJ("*is KOSTAG*", "*is Part Module*", "*is Event or Action name*"
 
   - **CherryLIght** *object Control KOSCherryLight kos part* 
 
@@ -21,5 +22,7 @@ set CtrlLight to MovPartOBJ("CtrlLandL", "ModuleRoboticController", "Activer la 
   - **CtrlLight** *object Control KSP KAL1000 part controller anim*
 
 > The Constructor **MovPartOBJ()** thus controls all shares using the specified KOSTAG for an object
-> 
+
 > EX : aeroBreak["move"]\().  -> activate all part with "KosAerofrrein" name.
+
+##this script is a Beta version 
