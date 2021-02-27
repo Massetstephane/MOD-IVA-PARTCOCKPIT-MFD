@@ -1,12 +1,12 @@
 ## How to USE
 
-- boot folder
+- **boot folder**
   - Contains **start.ks** script
   
     He manages the main page of the MFDkos    
     To access scripts or set up the ship of your choice
 
-- lib_Prog folder
+- **lib_Prog folder**
   - You place your script in this folder and the start script in the boot folder will read the script information
     and display on the page the script info page with the possibility of launching it
     
@@ -16,7 +16,7 @@
       
       Will show a list with this info : My program do that
     
-- library
+- **library** (This folder is created by using this [library](https://github.com/KSP-KOS/KSLib))
   - **lib_FlashString.ks**  -> Constructor to animate STRING LABEL and FLAG (text and state)
                                 
                                Produces these functions:
