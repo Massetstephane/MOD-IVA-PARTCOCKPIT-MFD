@@ -2,7 +2,10 @@
 ##### MK1 cockpit
 
 # MOD-IVA-COCKPIT-MFD
-##### Ver. (KSP 1.11.1)
+| Version | Supported  |
+| ------- | :---: |
+| KSP 1.11.1  | :white_check_mark: |
+| KSP 1.10.1  | :white_check_mark: |
 
 using a modified mu file from ASET Props (v1.5)
 - ALCORMFD40X20.mu
@@ -37,14 +40,14 @@ ______
 
 > Supported Mods for module in MFD screen page, (The pages of these modules are already embedded in the cfg file)
 
-| MODULE | TESTED|
-|:---|:---|
-|- MECHJEB2| :white_check_mark: |
-|- SCANSAT| :x: |
+|  MODULE    | TESTED|
+|:---        |:---:  |
+|- MECHJEB2  | :white_check_mark: |
+|- SCANSAT   | :x: |
 |- VESSELVIEW| :x: |
 |- NAVUTILRPM| :x: |
 |- ASTROGATOR| :x: |
-|- DPAI_RPM| :x: |
+|- DPAI_RPM  | :x: |
 ______
 
 ## INSTALLATION
