@@ -1,0 +1,77 @@
+// ------------------------------------------------------------------
+// ----        Library Reset label texxt and state to 0          ----
+// ------------------------------------------------------------------
+// Copyright © 2021 Masset Stephane 
+// Lic. MIT
+
+@lazyGlobal off.
+
+// setting object choose button label or flag
+function setKPMapi
+{
+	parameter cho.     						
+	if cho = 1 {return addons:kpm:buttons.}	// setting labels object
+	if cho = 2 {return addons:kpm:labels.}	// setting labes object
+	if cho = 3 {return addons:kpm:flags.}	// setting flags object
+}
+// set texte label "-----" and state or cho of user
+function setlabFull 
+{
+	parameter object, 
+			  Text is "-----",
+			  state is false.
+    from {local xx is 13.} until xx<0 step { set xx to xx-1.} do 
+	{
+		object:setlabel(xx, Text).
+		object:setstate(xx, state).
+	}.
+}
+// set label text
+function setLabTxt
+{
+	parameter object,
+			  ID,
+			  Text is "".
+	if Text = "" set Text to object:getlabel(ID).	
+	object:setlabel(ID, Text).
+}
+function setLabSt
+{
+	parameter object,
+			  ID,
+			  state is false.
+	if state object:setstate(ID, state).
+	object:setstate(ID, state).
+}
+
+// get Label state
+function getlabSt
+{
+	parameter object, ID.
+	return object:getstate(ID).
+}
+// button delegate
+function dele
+{
+	parameter object, ID, funct.
+	object:setdelegate(ID, funct).
+}
+// starting sequence test cosmetique
+function initLab
+{
+	parameter tempos is 0.5.
+	local test1 is "_____".
+	local test2 is "[font(4)]"+char(175)+char(175)+char(175)+char(175)+char(175)+"[font(0)]".
+	local labini is setKPMapi(2).						        // object label for texxt and state
+	from {local xx is 13.} until xx<0 step { set xx to xx-1.} do
+	{
+		setLabTxt(labini, xx, test1).
+		wait tempos.
+		setLabTxt(labini, xx, test2).
+		wait tempos.
+		setLabSt(labini, xx, true).
+		wait tempos.
+		setLabTxt(labini, xx, "-----").
+		setLabSt(labini, xx, false).
+	}.
+}
