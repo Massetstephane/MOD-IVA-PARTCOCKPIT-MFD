@@ -9,11 +9,13 @@ using a modified mu file from ASET Props (v1.5)
 - MFD60x30.mu
 #### These models and IVA are independent and do not affect the required MODS
 
-> "ASET Props" by Alexustas licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
+> "ASET Props" by Alexustas licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. (licenses/by-nc-sa/3.0/)
   
-> Near Future Props v0.6.4 by Nertea License (http://creativecommons.org/licenses/by-nc-sa/4.0/legalcode)
+> Near Future Props v0.6.4 by Nertea License (licenses/by-nc-sa/4.0/legalcode)
 
-> DE_IVAExtension by DemonEin licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
+> DE_IVAExtension by DemonEin licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. (licenses/by-nc-sa/3.0/)
+
+> licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. (licenses/by-nc-sa/3.0/)
 
 Features
 - #### This MODS give Full IVA and Cockpit PART using ASET and JSI RasterPropMonitor
