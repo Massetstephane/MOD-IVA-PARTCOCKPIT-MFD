@@ -31,15 +31,17 @@ ______
 - NearFutureProps_0_6_4
 ______
 
-> Supported Mods (for module in MFD screen page)
-| MOD | TESTED|
+> Supported Mods (for module in MFD screen page, 
+> The pages of these modules are already embedded in the cfg file)
+
+| MODULE | TESTED|
 |:---|:---|
-|- MECHJEB2|' - [X] ok|
-- SCANSAT
-- VESSELVIEW
-- NAVUTILRPM
-- ASTROGATOR
-- DPAI_RPM
+|- MECHJEB2| OK|
+|- SCANSAT| NO|
+|- VESSELVIEW| NO|
+|- NAVUTILRPM| NO|
+|- ASTROGATOR| NO|
+|- DPAI_RPM| NO|
 ______
 
 > INSTALLATION
