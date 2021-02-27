@@ -2,7 +2,7 @@
 // ----                 S T A R T U P file                       ----
 // ------------------------------------------------------------------
 // Copyright © 2021 Masset Stephane 
-// Lic. MIT
+// Lic. Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)
 // setting objects to acces buttons and buttonlabel
 
 wait until ship:unpacked.
