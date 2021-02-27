@@ -33,6 +33,8 @@ ______
 - kOSPropMonitor-1.7.1.38388
 - NearFutureProps_0_6_4
 ______
+# LICENCE
+ Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)
 
 > Supported Mods (for module in MFD screen page, (The pages of these modules are already embedded in the cfg file)
 > 
