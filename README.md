@@ -40,14 +40,14 @@ ______
 
 > Supported Mods for module in MFD screen page, (The pages of these modules are already embedded in the cfg file)
 
-|  MODULE    | TESTED|
-|:---        |:---:  |
+|  MODULE    |    TESTED 1.11.1   |
+|:---        |        :---:       |
 |- MECHJEB2  | :white_check_mark: |
-|- SCANSAT   | :x: |
-|- VESSELVIEW| :x: |
-|- NAVUTILRPM| :x: |
-|- ASTROGATOR| :x: |
-|- DPAI_RPM  | :x: |
+|- SCANSAT   |        :x:         |
+|- VESSELVIEW|        :x:         |
+|- NAVUTILRPM|        :x:         |
+|- ASTROGATOR|        :x:         |
+|- DPAI_RPM  |        :x:         |
 ______
 
 ## INSTALLATION
