@@ -17,7 +17,7 @@
         "Monitor", CurentMoni@        
     ).
    ```
-   Completely inspired by ![SMOKETEER](https://github.com/smoketeer/fall)
+   Completely inspired by ![SMOKETEER](https://github.com/smoketeer/fall) , and his FALL script.
    
    _
 ## LICENCE
