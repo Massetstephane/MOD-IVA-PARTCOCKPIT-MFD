@@ -1,4 +1,4 @@
-# MOD-IVA-PARTCOCKPPIT-MFD
+# MOD-IVA-COCKPIT-MFD
 ##### (KSP 1.11.1)
 
 using a modified mu file from ASET Props (v1.5)
