@@ -1,6 +1,6 @@
 **Hover.ks**
-> Need standard library **KSLib** To function properly
-> Need **lib_KpmAddons.ks**, **lib_FlashString.ks**, **lib_MovePart.ks** *scripts.*
+> *Need standard library* **KSLib** *To function properly*
+> *Need* **lib_KpmAddons.ks**, **lib_FlashString.ks**, **lib_MovePart.ks** *scripts.*
 > 
 - **lib_MovePart.ks** script *in Hover.ks code for KSP french patch*
 
