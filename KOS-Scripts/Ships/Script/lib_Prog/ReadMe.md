@@ -26,3 +26,11 @@ set CtrlLight to MovPartOBJ("CtrlLandL", "ModuleRoboticController", "Activer la 
 > EX : aeroBreak["move"]\().  -> activate all part with "KosAerofrrein" name.
 
 **this script is a Beta version** 
+
+_____
+> To Do list
+- [X] Control Altitude level
+- [X] Landing Mod
+- [X] using MFD buttons and labels
+- [ ] Stopped and stabilized the aircraft in flight and maintain a position (Currently only the attitude of the ship is controlled)
+- [ ] Save variables in a file for a type of aircraft (Remember parameters for this type of aircraft)
