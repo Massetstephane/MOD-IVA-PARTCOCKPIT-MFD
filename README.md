@@ -1,4 +1,6 @@
-![](https://i.imgur.com/CB9zHTRh.png)
+![MK1 cockpit](https://i.imgur.com/CB9zHTRh.png)
+##### MK1 cockpit
+
 # MOD-IVA-COCKPIT-MFD
 ##### (KSP 1.11.1)
 
