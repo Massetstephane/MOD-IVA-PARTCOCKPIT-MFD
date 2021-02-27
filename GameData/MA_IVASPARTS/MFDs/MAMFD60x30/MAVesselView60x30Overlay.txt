@@ -1,0 +1,32 @@
+[hw][#CEE3F6FF][font0]  RESOURCES ST/TOT[#ffffffff] |  [#CEE3F6FF]TARGET MENU[#ffffffff]  |  [#CEE3F6FF]LANDING MODE[#ffffffff]  | [#CEE3F6FF]CREW / FL.LOG[#ffffffff] |    [#CEE3F6FF]POD  CAMS[#ffffffff]  |   [#CEE3F6FF]EXTRA CAMS[#ffffffff]   |   [#CEE3F6FF]STANDBY          	
+              
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[hw][#CEE3F6FF][font0] ORBIT+ORBITDISPLAY[#ffffffff]| [#CEE3F6FF]ORBIT+MAP/MAP[#ffffffff] |    [#CEE3F6FF]DOCKING[#ffffffff]     |[font2][#98cdf9FF]  VESSEL VIEW  [font0][#ffffffff]|                 | [#FFFF00FF]UP/DOWN [#CEE3F6FF]-NAVIGATE/ [#FFFF00FF]+[#CEE3F6FF]ENTER/[#FFFF00FF]-[#CEE3F6FF]BACK[#ffffffff]  |

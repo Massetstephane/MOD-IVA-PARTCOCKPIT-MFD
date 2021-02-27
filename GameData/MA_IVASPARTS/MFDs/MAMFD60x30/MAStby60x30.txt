@@ -1,0 +1,31 @@
+[hw][#CEE3F6FF][font0]  RESOURCES ST/TOT[#ffffffff] |  [#CEE3F6FF]TARGET MENU[#ffffffff]  |  [#CEE3F6FF]LANDING MODE[#ffffffff]  | [#CEE3F6FF]CREW / FL.LOG[#ffffffff] |    [#CEE3F6FF]POD  CAMS[#ffffffff]  |   [#CEE3F6FF]EXTRA CAMS[#ffffffff]   |[font2][#c4c8caFF]   STANDBY         ..   	      
+
+
+
+
+
+
+
+
+
+                     [#81BEF7FF]««««««««««««««««««[@x-288][#FFFFFFFF]{0}   $&$ STOREDSTRING_2
+[#81BEF7FF]                         {0} $&$STOREDSTRING_0
+			  
+           {1} {0} $&$ STOREDSTRING_1 STOREDSTRING_7
+						
+              Powered by  JSI RasterPropMonitor			  
+[#81BEF7FF]                        v {0} $&$ RPMVERSION						
+						
+						
+						
+						
+   [hw][#ffffffc8][font1][sup]_[/sup]MechJeb2    charged : {0:"[font2][#01ff07FF]YES";;"[font0][#fffffffa]NO"} $&$ ISLOADED_MECHJEB2
+   [hw][#ffffffc8][font1][sup]_[/sup]SCANsat     charged : {0:"[font2][#01ff07FF]YES";;"[font0][#fffffffa]NO"} $&$ ISLOADED_SCANSAT
+   [hw][#ffffffc8][font1][sup]_[/sup]VesselView  charged : {0:"[font2][#01ff07FF]YES";;"[font0][#fffffffa]NO"} $&$ ISLOADED_VESSELVIEW
+   [hw][#ffffffc8][font1][sup]_[/sup]NavUtilRPM  charged : {0:"[font2][#01ff07FF]YES";;"[font0][#fffffffa]NO"} $&$ ISLOADED_NAVUTILRPM  
+   [hw][#ffffffc8][font1][sup]_[/sup]Astrogator  charged : {0:"[font2][#01ff07FF]YES";;"[font0][#fffffffa]NO"} $&$ ISLOADED_ASTROGATOR
+   [hw][#ffffffc8][font1][sup]_[/sup]DPAI_RPM    charged : {0:"[font2][#01ff07FF]YES";;"[font0][#fffffffa]NO"} $&$ ISLOADED_DPAI_RPM						
+
+						
+						
+[hw][#CEE3F6FF][font0] ORBIT+ORBITDISPLAY[#ffffffff]| [#CEE3F6FF]ORBIT+MAP/MAP[#ffffffff] |    [#CEE3F6FF]DOCKING[#ffffffff]     |  [#CEE3F6FF]VESSEL VIEW[#ffffffff]  |
