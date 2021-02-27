@@ -39,12 +39,12 @@ ______
 
 | MODULE | TESTED|
 |:---|:---|
-|- MECHJEB2| OK|
-|- SCANSAT| NO|
-|- VESSELVIEW| NO|
-|- NAVUTILRPM| NO|
-|- ASTROGATOR| NO|
-|- DPAI_RPM| NO|
+|- MECHJEB2| :white_check_mark: |
+|- SCANSAT| :x: |
+|- VESSELVIEW| :x: |
+|- NAVUTILRPM| :x: |
+|- ASTROGATOR| :x: |
+|- DPAI_RPM| :x: |
 ______
 
 ## INSTALLATION
