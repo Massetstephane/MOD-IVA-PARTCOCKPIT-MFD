@@ -1,0 +1,22 @@
+  {buttonLabel0} {buttonLabel1} {buttonLabel2} {buttonLabel3}  {buttonLabel4} {buttonLabel5} {buttonLabel6}  
+[#60F8F9][hw]CPU: {currentCPU} - {processorLabel}      {keyboardFlag}{COLOR}
+[hw]{l1} 
+[hw]{l2}
+[hw]{l3}
+[hw]{l4}
+[hw]{l5}
+[hw]{l6}
+[hw]{l7}
+[hw]{l8}
+[hw]{l9}
+[hw]{l10}
+[hw]{l11}
+[hw]{l12}
+[hw]{l13}
+[hw]{l14}
+[hw]{l15}
+[hw]{l16}
+[hw]{l17}
+[hw]{l18}
+[hw]{l19}
+  {buttonLabel7} {buttonLabel8} {buttonLabel9} {buttonLabel10} {buttonLabel11} {buttonLabel12} {buttonLabel13}

@@ -1,0 +1,22 @@
+              [#77FF77FF]K.O.S COMPUTER
+
+
+
+
+
+
+[#3a2efe]           ____________________     
+ 
+[#aaff32][hw]                               K O S system 1.3.1 MFD[/hw]	
+[#3a2efe]           ____________________
+[@x654][@y-16][#00ff66][font4]RUN[font0][@y-12][#ffffff][sup]_
+
+
+
+
+
+
+
+-[hw] VERSION [/hw] RPM v{0} $&$ RPMVERSION            
+             
+[font1][hw][#ffffffff]   KSP 1.11.1 + Breaking Ground Expansion + Making History Expansion
