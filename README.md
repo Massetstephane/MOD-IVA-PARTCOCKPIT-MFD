@@ -15,7 +15,7 @@ using a modified mu file from ASET Props (v1.5)
 
 > DE_IVAExtension by DemonEin licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. (licenses/by-nc-sa/3.0/)
 
-> licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. (licenses/by-nc-sa/3.0/)
+> IVA_ASET_MAKING_HISTORY-1.0 licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. (licenses/by-nc-sa/3.0/)
 
 Features
 - #### This MODS give Full IVA and Cockpit PART using ASET and JSI RasterPropMonitor
@@ -64,4 +64,4 @@ ______
 
 **Nertea** ``for are pack Near Future Props v0.6.4``
 
-``Completely inspired by DE_IVAExtension created by`` **DemonEin** 
+``Completely inspired by DE_IVAExtension created by`` **DemonEin** ``and IVA_ASET_MAKING_HISTORY``
