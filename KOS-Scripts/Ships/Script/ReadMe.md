@@ -35,5 +35,5 @@
                                
                                "Move", "Stop"
                                
-  ## These are scripts that are likely to evolve and are not definitive.
+  #### *Non-definitive scripts that can be modified, optimized.*
   
