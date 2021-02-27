@@ -11,7 +11,9 @@
     and display on the page the script info page with the possibility of launching it
     
     - The first ligne in the script is used to show information
+    - 
       EX : //: My program do that
+      
       Will show a list with this info : My program do that
     
 - library
