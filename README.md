@@ -7,7 +7,7 @@
 using a modified mu file from ASET Props (v1.5)
 - ALCORMFD40X20.mu
 - MFD60x30.mu
-- #### These models are independent and do not affect the original ASET mod
+#### These models are independent and do not affect the original ASET mod
 
 
 > "ASET Props" by Alexustas is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
