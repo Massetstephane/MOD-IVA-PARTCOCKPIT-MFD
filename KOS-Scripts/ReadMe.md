@@ -19,7 +19,7 @@
    ```
    works that way : myConstructorObject\["setTXT"](parameter).
    
-Completely inspired by [SMOKETEER](https://github.com/smoketeer/fall) , and his FALL script.
+Completely inspired by [SMOKETEER](https://github.com/smoketeer/fall) , and his FALL script. Thanks to him
 _____
 
 ### INSTALLS
