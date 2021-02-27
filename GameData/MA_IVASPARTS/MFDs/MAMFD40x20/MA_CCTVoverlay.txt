@@ -1,0 +1,20 @@
+[hw][font0]  [#CEE3F6FF] PFD ADI [#FFFFFFFF]|[#CEE3F6FF] TARGET [#FFFFFFFF]|[#CEE3F6FF]NAV 1/2/3 [#FFFFFFFF]|[#CEE3F6FF]MJ/SAS/ASTR[#FFFFFFFF]|[#CEE3F6FF]GRAPHS 1/2[#ffffffff]|[#CEE3F6FF]VESL.VIEW [#FFFFFFFF]|[#CEE3F6FF] RESC.ST/TOT
+          [#00FF0055]{1} CCTV [#{2:"FF000066";"00000000";"00000000"}]¶     $&$ PROP_PODcam40X20_ID STOREDSTRING_6 PERIOD_1HZ
+[font0][@y-10][#FFFF0066]¡                                      [#FFFF0066][@y-10]¢
+[font0][@y+10][#FFFF0066]P                                      [@y-10]T
+[font0][@y+10][#FFFF0066]A                                      [@y-10]I
+[font0][@y+10][#FFFF0066]N                                      [@y-10]L
+[font0][@y-10][#FFFF0066]                                       [@y-10]T
+[font0][@y-15][#FFFF0066]£                                      [@y-10]¤
+
+[font0][#FFFF0066]¡                                      ¢
+[font0][hw][#FFFF0066]                                                                              [/hw][@y-13]+
+[font0][hw][#FFFF0066]CAM                                                                         [@y+15]ZOOM
+[font0][hw][#FFFF0066]SEL                                    
+[font0][hw][#FFFF0066]                                                                             [dw][@y+5]-
+[font0][@y-12][#FFFF0066]£                                      ¤
+
+
+[font0][hw][#FFFF0066]                                                                        [@y-12]RESET[@y-12][dw]-
+[font0][hw][#FFFF0066]                                                                       [@y-22]CAM POS
+[hw][#CEE3F6FF][font0] FLIGHT/LNDG [#FFFFFFFF]|[#CEE3F6FF]ORBIT+DISP[#FFFFFFFF]|[#CEE3F6FF]DOCK+/DPAI[#FFFFFFFF]|[#CEE3F6FF] SHIP/LOG [#FFFFFFFF]|[#CEE3F6FF] CREW/AcGr [#FFFFFFFF]|[#98cdf9ff][font2] POD CAMS[font0] [#FFFFFFFF]|[#CEE3F6FF] EXTRA CAMS 

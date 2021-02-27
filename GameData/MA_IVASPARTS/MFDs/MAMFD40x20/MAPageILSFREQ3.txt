@@ -1,0 +1,20 @@
+[hw][font0][#77FF77FF]------------------- [#FFFF33FF]R A D I O info : [font2]ILS[font0] , VOR DME , COM [#77FF77FF]--------[font2]P3[font0]---------------
+
+          [#33FF00FF][font1]ISLAND AIRFIELD (KAFD)[font0]
+          [#FFFFFFFF][sup][@y-10]______________________
+ [sup]_[/sup] NDB DME [sup]_[/sup] [#33FF00FF][font2]197.0[#FFFFFFFF][font0] : 97.8 m
+ [sup]_[/sup] TDZ
+   lat : [#FFFF33FF]-1.51603061608[#FFFFFFFF]  /[#FFFF33FF][hw]  1° 30 58 S 	
+  long : [#FFFF33FF]-71.83821103293[#FFFFFFFF] /[#FFFF33FF][hw] 71° 51 19 W
+
+ [sup]_[/sup] RWY THR - RWY BRG [#FF3300FF][font2]090[#FFFFFFFF][font0]
+ [sup]_[/sup] elev 133.7 m
+   lat : [#FFFF33FF]-1.51747824568[#FFFFFFFF]  /[#FFFF33FF][hw]  1° 31 03 S 	
+  long : [#FFFF33FF]-71.96730119069[#FFFFFFFF] /[#FFFF33FF][hw] 71° 58 02 W
+
+ [sup]_[/sup] Grunt Concrete No
+ [sup]_[/sup] dim 1.20 km x ? m
+
+[#FFFFFFFF][sup][@y-5]__[/sup][font2][#00FF00FF] [hw][@y-6]Retour
+
+[hw][font0][#CEE3F6FF]    Button:[#00CC33FF] NEXT[#CEE3F6FF] page suivante.[#FFFFFFFF]|[#00CC33FF] PREV[#CEE3F6FF] page precedente.
