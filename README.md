@@ -17,7 +17,8 @@ using a modified mu file from ASET Props (v1.5)
 
 > IVA_ASET_MAKING_HISTORY-1.0 licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. (licenses/by-nc-sa/3.0/)
 
-##Features
+## Features
+
 - #### This MODS give Full IVA and Cockpit PART using ASET and JSI RasterPropMonitor
 - #### Updated MFD (animated buttons, backlight buttons, brightness buttons setup screen)
 - #### Mfd page revisited
@@ -35,7 +36,7 @@ ______
 ______
 
 > Supported Mods (for module in MFD screen page, (The pages of these modules are already embedded in the cfg file)
-> 
+
 | MODULE | TESTED|
 |:---|:---|
 |- MECHJEB2| OK|
@@ -46,7 +47,7 @@ ______
 |- DPAI_RPM| NO|
 ______
 
-##INSTALLATION
+## INSTALLATION
 
 - Copy the folder **MA_IVASPARTS** into your KSP GameData directory
 
