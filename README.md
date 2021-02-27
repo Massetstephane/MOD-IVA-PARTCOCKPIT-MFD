@@ -18,6 +18,7 @@ using a modified mu file from ASET Props (v1.5)
 
 - #### This MODS give Full IVA and Cockpit PART using ASET and JSI RasterPropMonitor
 - #### Updated MFD (animated buttons, backlight buttons, brightness buttons setup screen)
+- #### Mfd page revisited
 - #### MFD specials dedicated to KOS
 - #### IVA and Cockpit for KSP (Work in progress)
 ______
@@ -31,8 +32,16 @@ ______
 - NearFutureProps_0_6_4
 ______
 
+> Supported Mods (for module in MFD screen page)
+- MECHJEB2
+- SCANSAT
+- VESSELVIEW
+- NAVUTILRPM
+- ASTROGATOR
+- DPAI_RPM
+______
+
 > INSTALLATION
-> 
 Copy the folder **MA_IVASPARTS** into your KSP GameData directory
 
 ## Thanks to
