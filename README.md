@@ -29,8 +29,10 @@ ______
 - kOS-v1.2.1.0 or greater
 - kOSPropMonitor-1.7.1.38388
 - NearFutureProps_0_6_4
-
 ______
+
+> INSTALLATION
+Copy the folder into your KSP GameData directory
 
 ## Thanks to
 
