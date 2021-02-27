@@ -16,7 +16,7 @@
       
       Will show a list with this info : My program do that
     
-- **library** (This folder is created by using this [KSLib](https://github.com/KSP-KOS/KSLib)) License [MIT](https://github.com/KSP-KOS/KSLib/blob/master/LICENSE)
+- **library** (This folder is created by using this standard library [KSLib](https://github.com/KSP-KOS/KSLib) : License [MIT](https://github.com/KSP-KOS/KSLib/blob/master/LICENSE)
   - **lib_FlashString.ks**  -> Constructor to animate STRING LABEL and FLAG (text and state)
                                 
                                Produces these functions:
