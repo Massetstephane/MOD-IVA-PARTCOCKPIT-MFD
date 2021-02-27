@@ -57,7 +57,7 @@ ______
 
 **Alexustas** `` For these beautiful PROPS packs (ASET) ``
 
-**Mihara** ``for its original RasterPropMonitor mod, and thank MOARdV and JonnyOThan For its maintenance.``
+**Mihara** ``for its original RasterPropMonitor mod, and thank`` **MOARdV** **JonnyOThan** ``For its maintenance.``
 
 **dsonbill** ``for its very practical kOS<-->RPM interface for Kerbal Space Program``
 
