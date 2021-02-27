@@ -19,3 +19,7 @@
    ```
    Completely inspired by ![SMOKETEER](https://github.com/smoketeer/fall)
    
+   _
+## LICENCE
+ Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)
+   
