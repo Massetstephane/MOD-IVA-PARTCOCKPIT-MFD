@@ -23,18 +23,18 @@ using a modified mu file from ASET Props (v1.5)
 - #### IVA and Cockpit for KSP (Work in progress)
 ______
 
-|required Mods | TESTED |
-|:--- | :--- |
-| - ASET_Avionics-2.1| - [X] OK|
-| - ASET_Props-1.5| - [X] OK|
-| - RasterPropMonitor-v0.31.4| - [X] OK|
-| - kOS-v1.2.1.0 or greater| - [X] OK|
-| - kOSPropMonitor-1.7.1.38388| - [X] OK|
-| - NearFutureProps_0_6_4| - [X] OK|
+- ASET_Avionics-2.1
+- ASET_Props-1.5
+- RasterPropMonitor-v0.31.4
+- kOS-v1.2.1.0 or greater
+- kOSPropMonitor-1.7.1.38388
+- NearFutureProps_0_6_4
 ______
 
 > Supported Mods (for module in MFD screen page)
-- MECHJEB2        - [x] ok
+| MOD | TESTED|
+|:---|:---|
+|- MECHJEB2|' - [X] ok|
 - SCANSAT
 - VESSELVIEW
 - NAVUTILRPM
