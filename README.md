@@ -60,7 +60,7 @@ ______
 
 **dsonbill** ``for its very practical kOS<-->RPM interface for Kerbal Space Program``
 
-``KOS originally created by`` **Nivekk**`` , Thanks to all the contributors to this mod``
+``KOS originally created by`` **Nivekk**`` Thanks to all the contributors to this mod``
 
 **Nertea** ``for are pack Near Future Props v0.6.4``
 
