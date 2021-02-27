@@ -12,6 +12,8 @@ using a modified mu file from ASET Props (v1.5)
 
 > "ASET Props" by Alexustas is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
    More info: http://creativecommons.org/licenses/by-nc-sa/3.0/
+   
+> Near Future Props v0.6.4 by Nertea License (http://creativecommons.org/licenses/by-nc-sa/4.0/legalcode)
 
 
 - #### This MODS give Full IVA and Cockpit PART using ASET and JSI RasterPropMonitor
@@ -35,4 +37,5 @@ Alexustas For these beautiful PROPS packs (ASET)
 Mihara for its original RasterPropMonitor mod, and thank MOARdV and JonnyOThan For its maintenance.
 dsonbill for its very practical kOS<-->RPM interface for Kerbal Space Program
 KOS originally created by Nivekk, Thanks to all the contributors to this mod
+Thanks to Nertea for are pack Near Future Props v0.6.4
 
