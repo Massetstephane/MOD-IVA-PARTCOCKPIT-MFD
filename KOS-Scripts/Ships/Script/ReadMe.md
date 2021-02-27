@@ -10,6 +10,10 @@
   - You place your script in this folder and the start script in the boot folder will read the script information
     and display on the page the script info page with the possibility of launching it
     
+    - The first ligne in the script is used to show information
+      EX : //: My program do that
+      Will show a list with this info : My program do that
+    
 - library
   - **lib_FlashString.ks**  -> Constructor to animate STRING LABEL and FLAG (text and state)
                                 
