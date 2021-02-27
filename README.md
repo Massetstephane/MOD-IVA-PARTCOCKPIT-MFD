@@ -3,3 +3,11 @@
 - #### This MODS give Full IVA and Cockpit PART using ASET and JSI RasterPropMonitor
 - #### Updated MFD (animated buttons, backlight buttons, brightness buttons setup screen
 - #### IVA and Cockpit for KSP command PART (Work in progress)
+
+> required Mods
+- ASET_Avionics
+- ASET_Props
+- JSI
+- KOS
+- KPM
+- NearFutureProps
