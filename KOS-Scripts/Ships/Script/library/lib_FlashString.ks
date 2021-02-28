@@ -2,7 +2,7 @@
 // ----              Function For FLASHING TEXT                  ----
 // ------------------------------------------------------------------
 // Copyright © 2021 Masset Stephane 
-// Lic. MIT
+// Lic. Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)
 
 @lazyGlobal off.
 
