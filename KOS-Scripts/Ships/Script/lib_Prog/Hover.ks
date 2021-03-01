@@ -1,9 +1,10 @@
 //:Hover & Landing Program V4 (test library movepart)
-// Vers 4.4 fonctionnel using the PIDLoop integrated in kos
+// Vers 5.0 fonctionnel using the PIDLoop integrated in kos
 // buttons work now, added input altitude & landing Mode & new library
-// Testing action and event in selected part module by kos tag
+// Action and event in selected part module by kos tag ok
+// Main pidloop Parameter are saved in corresponding aircraft file.txt in a special data folder
 // Copyright © 2021 Masset Stephane 
-// Lic. Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)
+// Lic. MIT
 
 parameter inpuTaltitude is 0.                         				// base height if nothing enter
 // ---- My user functions in library folder ----
@@ -15,7 +16,9 @@ runPath ("0:/library/lib_input_terminal").			  				// for input altitude
 runpath ("0:/library/lib_navball").					  				// library function for fly data
 
 // ===================== setting variables ======================
-set hoVers to "V4.4".												// version tag
+set NameAircrafFile to ship:shipName.
+set hoVers to "V5.0".												// version tag
+set Convertnumber to "".											// emptystring+number force string
 set bound_Box to ship:bounds.                         				// ship volume
 lock AltiRad to bound_Box:bottomaltradar.							// Altitude radar under ship
 lock Altisea to bound_Box:bottomalt.								// Altitude Sealevel under ship
@@ -34,6 +37,60 @@ set MINVstest to -5.												// Verticale speed output parameter (variable de
 set TargetVertSpeed to 0.											// set target speed to 0 (stationary)
 set FactorVspeedLand to -10.										// control the descent speed (depending reaction time motor)
 
+// ---- Checking if parameter saved file exist if not create it ----
+switch to 0.
+set vol to core:currentvolume.
+set SavedParamAircrFile to (NameAircrafFile + ".txt").
+if not vol:EXISTS("AircraftParM")													// check if folder exist or creat it
+{
+	vol:createdir("AircraftParM").
+	CD("0:/AircraftParM").
+} else CD("0:/AircraftParM").
+//																					// Create file if not exist
+if not vol:exists("AircraftParM/"+SavedParamAircrFile) vol:create("AircraftParM/"+SavedParamAircrFile).
+LIST FILES IN savedfile.															// store file in list (parameter folder)
+for n in savedfile
+{
+	if n:name = SavedParamAircrFile 												// search if aircraft parameter file present
+	{
+		local filecontain is n:readall.
+		if filecontain = ""															// file empty loading default parameter format
+		{
+			n:clear().
+			n:writeln("MINthr").
+			n:writeln(Convertnumber+MINthr).
+			n:writeln("MAXthr").
+			n:writeln(Convertnumber+MAXthr).
+			n:writeln("FactorVspeedLan").
+			n:writeln(Convertnumber+FactorVspeedLand).
+			n:write("endfile").
+			break.
+		} else																		// parameter updated with data in file 
+			{
+				set parseline to filecontain:iterator.								// to read by line
+				set filedatalexicon to lexicon().
+				until not parseline:next
+				{
+					local key is parseline:value.									// set lexicon key to string
+					if key = "endfile" break.										// exit end file reached
+					parseline:next.													// step to value
+					local value is parseline:value.									// set lexicon value to string
+					set filedatalexicon[key] to value:TONUMBER().					// create index & value
+				}				
+				set MINthr to filedatalexicon:MINthr.								// update value from file
+				set MAXthr to filedatalexicon:MAXthr.
+				set FactorVspeedLand to filedatalexicon:FactorVspeedLan.					
+			}
+	}		
+}
+
+// ----          sounds             ----
+set Sound1 to getVoice(0).											// button sound
+definesound(Sound1,"SQUARE", 0, 0.01, 0.5, 0.1, 0.3).				// sound definition
+set sound2 to getVoice(1).											// end hover music
+definesound(sound2,"TRIANGLE", 0.0333, 0.02, 0.80, 0.05, 0.3).		// sound definition
+set sound2:tempo to 2.
+
 // ---- setting moving Part objects ----
 set cherryLight to MovPartOBJ("HoverLight", "ModuleLight", "activer l'éclairage").
 set aeroBreak to MovPartOBJ("KosAerofrein","ModuleAeroSurface", "activer").
@@ -42,7 +99,7 @@ set CtrlLight to MovPartOBJ("CtrlLandL", "ModuleRoboticController", "Activer la 
 
 // ---- pidLoop(KP, KI, KD, MINOUTPUT, MAXOUTPUT) ----
 set hoverPID to pidLoop(KP, KI, KD, MINthr, MAXthr).  				// set pidloop for throttle
-set VertSpPID to pidLoop(0.3,0.02,0.02, -5, 5).		  	// set pidloop for target vertical speed
+set VertSpPID to pidLoop(0.3,0.02,0.02, -5, 5).		  				// set pidloop for target vertical speed
 set hoverPID:setpoint to TargetVertSpeed.			  				// The current setpoint vertical speed
 
 // ----    setting the altitude on start depend choice off user    ----
@@ -187,8 +244,8 @@ function landingButton
 { 
 	if AltiRad > 180 or AltiRad < 40													// check for valid altitude
 	{
-		if altiRad > 180 InfoHud("* too much Altitude Recommanded 150 meter *", blue).
-		if AltiRad < 40 InfoHud("* too low Altitutde Recommanded 40 meter *", blue).
+		if altiRad > 200 InfoHud("* too much Altitude Recommanded 170 meter *", blue).
+		if AltiRad < 60 InfoHud("* too low Altitutde Recommanded 60 meter *", blue).
 		return.
 	}
 	// ---- retrieve pitch and roll and yaw(heading) ----
@@ -198,7 +255,11 @@ function landingButton
 	lock steering to heading(showhead,0).
 	local Landflash to Flashthing("[#e50000ff][hw] LANDING[/hw][#CEE3F6FF] ", "[hw]        [/hw] ", 0.8, label, 1).
 	set altitudestart to AltiRad.
-	MoveLandingLight("move")().
+	MovePart("Stop").
+	MoveLandingLight("Move")().
+	set sound1:tempo to 1.5.
+	set sound1:loop to true.
+	playNoteF("FA", "SOL", 1).
 	until ship:status = "LANDED" or ship:status = "SPLASHED"
 	{
 		set hoverPID:setpoint to (FactorVspeedLand * (AltiRad/altitudestart))-1.
@@ -209,8 +270,10 @@ function landingButton
 		wait 0.001.	
 	}
 	lock throttle to 0.
+	Sound1:stop().
+	MoveLandingLight("Stop")().
 	InfoHud("-- SHIP ON THE GROUND --"+"-"+ship:status+"-", green).
-	set running to true.
+	stop().
 }.
 
 // ---- function to calculate TWR only for selected VTOL engines ----
@@ -251,7 +314,7 @@ function calTWRVtol
 	until label["getSTA"](9) 
 	{
 		indicator["FlashSTR"](8, current_option + decal).                          	// Moving flashing Indicator.
-		print "current option : " + current_option + "  " at(30,5).
+		print "current option : " + PlanetLst[current_option] + "  " at(30,5).
 		if calTWR
 		{        
 			// active planet
@@ -266,7 +329,7 @@ function calTWRVtol
 			{
 				if eng:tag = "VTOL"	{ set totalThrust to totalThrust + eng:maxthrust. }
 			}
-			lb["Reset"]().
+			lb["Reset"]().															// clean labels
 			return totalThrust / (ship:mass * g).
 		}
 		wait 0.001.  
@@ -376,11 +439,29 @@ function RadarMode
 		lock curent_Alt to AltiRad.					  // curent altitude set to radar level
 		actualSetpoint().
 	}.
+	playNoteF("d4", "r4").
 }.
 
-// ---- function exit button 5 ----
+// ---- function exit button 5 & save parameter ----
 function stop
 { 
+	LIST FILES in curentsavedfile.
+	for n in curentsavedfile
+	{
+		if n = SavedParamAircrFile
+		{
+			n:clear().
+			n:writeln("MINthr").
+			n:writeln(Convertnumber+round(MINthr, 2)).
+			n:writeln("MAXthr").
+			n:writeln(Convertnumber+round(MAXthr, 2)).
+			n:writeln("FactorVspeedLan").
+			n:writeln(Convertnumber+FactorVspeedLand).
+			n:writeln("endfile").
+		}
+	}
+	sound2:play(musique()).							  // for fun :) (testing)
+	wait until not sound2:isplaying.
 	set running to true.							  // End Main hover boucle
 }.
 // ---- function MINthr output increment with deltamaxmin value depend signe button 7 ----
@@ -511,21 +592,6 @@ function Main_Screen
 	print "Ldg Vert Spd Do-1->" at(64,04).
 }.
 
-// ---- synthetiser ----
-function playNote
-{
-	parameter a.									  // input letter note no frequency
-	local V0 is getVoice(0).
-	set V0:wave to "SQUARE".
-	set V0:attack to 0.
-	set V0:decay to 0.01.
-	set V0:sustain to 0.5.
-	set V0:release to 0.1.
-	set V0:volume to 0.5.
-	// note(Frequency, Enfrequency or note, duration, keyDownlenght, volume)
-	V0:play( note(a, 0.05, 0.2)).
-}.
-
 // ---- hud text ----
 function InfoHud
 {
@@ -559,4 +625,54 @@ function Aff_Values
 	// Show the TWR for engine used for scrip hover
 	print "[#33FF00]" + round(TotalTWTVtolengs,2) at(26, 8).
 }.
+
+// ----          SOUNDS MANAGEMENT			 ----
+function definesound
+{
+	parameter sound,
+			  wave,
+			  attack,
+			  decay,
+			  sustain,
+			  release,
+			  volume.
+	set sound:wave to wave.
+	set sound:attack to attack.
+	set sound:decay to decay.
+	set sound:sustain to sustain.
+	set sound:release to release.
+	set sound:volume to volume.	
+}
+// ----            Buttons sounds			 ----
+function playNote									  // short sound
+{
+	parameter a,									  // input letter note no frequency
+			  dur is 0.05,
+			  keyd is 0.2.
+	// note(Frequency, Endfrequency or note, duration, keyDownlenght, volume)
+	Sound1:play( note(a, dur, keyd)).
+}.
+// ----           Fonctions sounds			 ----
+function playNoteF									  // slide sound
+{
+	parameter a,									  // input start letter note no frequency
+			  b,	
+			  dur is 0.05,
+			  keyd is 0.2.
+	// note(Frequency, Endfrequency or note, duration, keyDownlenght, volume)
+	Sound1:play( slideNote(a, b, dur, keyd)).
+}.
+// ----           Music exit hover           ----
+function musique
+{
+	set Partition to list().
+	partition:add(note("g4", 0.1, 0.20)).
+	Partition:add(note("g4", 0.1, 0.20)). 
+	Partition:add(note("f4", 0.1, 0.20)). 
+	Partition:add(note("e4", 0.1, 0.20)). 
+	Partition:add(note("d4", 0.1, 0.20)). 
+	Partition:add(note("c3", 0.1, 0.20)).
+
+	return Partition.
+} 
 // end file
