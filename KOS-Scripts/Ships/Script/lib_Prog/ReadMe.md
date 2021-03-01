@@ -33,4 +33,4 @@ _____
 - [X] Landing Mod
 - [X] using MFD buttons and labels
 - [ ] Stopped and stabilized the aircraft in flight and maintain a position (Currently only the attitude of the ship is controlled)
-- [ ] Save variables in a file for a type of aircraft (Remember parameters for this type of aircraft)
+- [X] Save variables in a file for a type of aircraft (Remember parameters for this type of aircraft)
