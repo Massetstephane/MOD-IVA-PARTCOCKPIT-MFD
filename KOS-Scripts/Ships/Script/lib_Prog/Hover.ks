@@ -458,6 +458,7 @@ function stop
 			n:writeln("FactorVspeedLan").
 			n:writeln(Convertnumber+FactorVspeedLand).
 			n:writeln("endfile").
+			break.
 		}
 	}
 	sound2:play(musique()).							  // for fun :) (testing)
