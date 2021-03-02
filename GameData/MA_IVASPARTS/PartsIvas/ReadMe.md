@@ -3,11 +3,11 @@
 
 >_________________
 
-Mk1-3Pod           -> IVA instrument done, IVA part Done, Part not defined yet
+  Mk1-3Pod           -> IVA instrument done, IVA part Done, Part cockpit upgraded (light)
 
-mk1Cockpit         -> IVA instrument updated (Mfd KOS)
+  mk1Cockpit         -> IVA instrument updated (Mfd KOS)
 
-mk2CockpitStandard -> IVA instrument + KOS done, IVA part done, Cockpit Part work in progress
+  mk2CockpitStandard -> IVA instrument + KOS done, IVA part done, Cockpit Part work in progress
 
 
 
