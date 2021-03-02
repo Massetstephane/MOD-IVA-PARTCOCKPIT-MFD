@@ -4,8 +4,8 @@
 >_________________
 
 |  Command   |         IVA        |     PART update      |
-|:---        |        :---:        |        :---          |
-| Mk1-3Pod | :white_check_mark: | :x: Part cockpit upgraded (light) |
+|:---        |        :---:        |        :---:          |
+| Mk1-3Pod | :white_check_mark: | :white_check_mark: |
 | mk1Cockpit | :white_check_mark:| :x: (light not updated yet)|
 | mk2CockpitStandard | :white_check_mark: | :x: IVA part done, Cockpit Part work in progress |
 | KV1Pod | :x: Only MFD changed | :x: |
