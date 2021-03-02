@@ -54,7 +54,7 @@ for n in savedfile
 	if n:name = SavedParamAircrFile 												// search if aircraft parameter file present
 	{
 		local filecontain is n:readall.
-		if filecontain = ""															// file empty loading default parameter format
+		if filecontain:empty														// file empty loading default parameter format
 		{
 			n:clear().
 			n:writeln("MINthr").
@@ -270,7 +270,7 @@ function landingButton
 		wait 0.001.	
 	}
 	lock throttle to 0.
-	Sound1:stop().
+	set sound1:loop to false.
 	MoveLandingLight("Stop")().
 	InfoHud("-- SHIP ON THE GROUND --"+"-"+ship:status+"-", green).
 	stop().
