@@ -6,8 +6,8 @@
 |  Command   |         IVA        |     IVA PART update      |
 |:---        |        :---:        |        :---:          |
 | Mk1-3Pod | :white_check_mark: | :white_check_mark: |
-| mk1Cockpit | :white_check_mark:| :white_check_mark: (light OK, WIP exterior)|
-| mk2CockpitStandard | :white_check_mark: | :x: IVA part done, Cockpit Part work in progress |
+| mk1Cockpit | :white_check_mark:| :white_check_mark: (light OK, WIP )|
+| mk2CockpitStandard | :white_check_mark: | :x: IVA ok & lights , Cockpit Part WIP |
 | KV1Pod | :x: Only MFD changed | :x: |
 | KV2Pod | :x: Only MFD changed | :x: |
 | KV3Pod | :x: Only MFD changed | :x: |
@@ -19,3 +19,6 @@
 | mk2LanderCan | :x: Only MFD changed | :x: |
 | mk2LanderCanV2 | :x: Only MFD changed | :x: |
 | mk3CockpitShuttle | :x: Only MFD changed | :x: | 
+
+
+> Part mu file are not modiifed only interior ( to keep compatibility with Mod who affect Command part file like Restock)
