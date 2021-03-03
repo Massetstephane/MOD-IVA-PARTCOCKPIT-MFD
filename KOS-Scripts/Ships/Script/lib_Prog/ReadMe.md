@@ -1,4 +1,4 @@
-**Hover.ks**
+**Hover.ks** (*V5.0*)
 
  *Need standard library* **KSLib** *To function properly*
  *Need* **lib_KpmAddons.ks**, **lib_FlashString.ks**, **lib_MovePart.ks** *scripts.*
