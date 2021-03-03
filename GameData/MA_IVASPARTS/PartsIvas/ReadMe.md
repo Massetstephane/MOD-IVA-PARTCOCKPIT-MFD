@@ -3,7 +3,7 @@
 
 >_________________
 
-|  Command   |         IVA        |     PART update      |
+|  Command   |         IVA        |     IVA PART update      |
 |:---        |        :---:        |        :---:          |
 | Mk1-3Pod | :white_check_mark: | :white_check_mark: |
 | mk1Cockpit | :white_check_mark:| :white_check_mark: (light OK, WIP exterior)|
