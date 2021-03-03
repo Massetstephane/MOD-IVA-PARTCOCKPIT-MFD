@@ -69,6 +69,10 @@ ______
 [**Nertea**](https://forum.kerbalspaceprogram.com/index.php?/topic/166941-111x-near-future-props-prop-assets-for-iva-developers/) ``for are pack Near Future Props v0.6.4``
 
 ``Completely inspired by DE_IVAExtension created by`` [**DemonEin**](https://forum.kerbalspaceprogram.com/index.php?/topic/186715-18x-de_ivaextension-for-all-the-stock-pod-ivas/page/6/&tab=comments#comment-3750324) ``and IVA_ASET_MAKING_HISTORY``
+
+## Beta Testers (in anticipation of a release.) *If they want to.*
+
+**DemonEin** , **JonnyOThan**
 _
 ## LICENCE
 Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)
