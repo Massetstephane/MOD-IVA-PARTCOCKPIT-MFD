@@ -56,6 +56,8 @@ ______
 
 - This mod is not compatible with **DE_IVAExtension-v.1.0.2** and **IVA_ASET_MAKING_HISTORY-1.0**
 
+____
+
 ## Thanks to
 
 [**Alexustas**](https://forum.kerbalspaceprogram.com/index.php?/topic/116430-aset-props-pack-v15-for-the-modders-who-create-iva/) `` For these beautiful PROPS packs (ASET) ``
@@ -69,6 +71,8 @@ ______
 [**Nertea**](https://forum.kerbalspaceprogram.com/index.php?/topic/166941-111x-near-future-props-prop-assets-for-iva-developers/) ``for are pack Near Future Props v0.6.4``
 
 ``Completely inspired by DE_IVAExtension created by`` [**DemonEin**](https://forum.kerbalspaceprogram.com/index.php?/topic/186715-18x-de_ivaextension-for-all-the-stock-pod-ivas/page/6/&tab=comments#comment-3750324) ``and IVA_ASET_MAKING_HISTORY``
+
+____
 
 ## Beta Testers (in anticipation of a release.) *If they want to.*
 
