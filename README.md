@@ -58,17 +58,17 @@ ______
 
 ## Thanks to
 
-**Alexustas** `` For these beautiful PROPS packs (ASET) ``
+[**Alexustas**](https://forum.kerbalspaceprogram.com/index.php?/topic/116430-aset-props-pack-v15-for-the-modders-who-create-iva/) `` For these beautiful PROPS packs (ASET) ``
 
-**Mihara** ``for its original RasterPropMonitor mod, and thank`` **MOARdV & JonnyOThan** ``For its maintenance.``
+**Mihara** ``for its original RasterPropMonitor mod, and thank`` **MOARdV & JonnyOThan** ``For its maintenance.`` [RasterPropMonitor (adopted) by JonnyOThan](https://forum.kerbalspaceprogram.com/index.php?/topic/190737-18x-110x-rasterpropmonitor-adopted/)
 
-**dsonbill** ``for its very practical kOS<-->RPM interface for Kerbal Space Program``
+[**dsonbill**](https://github.com/dsonbill/kOSPropMonitor) ``for its very practical kOS<-->RPM interface for Kerbal Space Program``
 
-``KOS originally created by`` **Nivekk**`` Thanks to all the contributors to this mod``
+``KOS originally created by`` [**Nivekk**](https://github.com/KSP-KOS/KOS) `` Thanks to all the contributors to this mod``
 
-**Nertea** ``for are pack Near Future Props v0.6.4``
+[**Nertea**](https://forum.kerbalspaceprogram.com/index.php?/topic/166941-111x-near-future-props-prop-assets-for-iva-developers/) ``for are pack Near Future Props v0.6.4``
 
-``Completely inspired by DE_IVAExtension created by`` **DemonEin** ``and IVA_ASET_MAKING_HISTORY``
+``Completely inspired by DE_IVAExtension created by`` [**DemonEin**](https://forum.kerbalspaceprogram.com/index.php?/topic/186715-18x-de_ivaextension-for-all-the-stock-pod-ivas/page/6/&tab=comments#comment-3750324) ``and IVA_ASET_MAKING_HISTORY``
 _
 ## LICENCE
- Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)
+Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)
