@@ -16,7 +16,7 @@
  I'm not sure that **ship:unpacked** works or so it's another problem !
  I added a delay after this line*
 ```javascript
-wait 1.5.
+wait 3.
 ```
 *I test right now maybe when increasing this delay the problem be solved*
 
