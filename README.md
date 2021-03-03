@@ -76,7 +76,7 @@ ____
 
 ## Beta Testers (in anticipation of a release.) *If they want to.*
 
-**DemonEin** , **JonnyOThan**
+**DemonEin** , **JonnyOThan** , **dsonbill**
 
 ______
 
