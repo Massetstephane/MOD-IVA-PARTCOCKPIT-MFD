@@ -1,7 +1,7 @@
 ![MK1 cockpit](https://i.imgur.com/CB9zHTRh.png)
 ##### MK1 cockpit
 
-# MOD-IVA-COCKPIT-MFD
+# MOD-IVA-COCKPIT-MFD (with KOS monitor integred)
 | Version | Supported  |
 | ------- | :---: |
 | KSP 1.11.1  | :white_check_mark: |
