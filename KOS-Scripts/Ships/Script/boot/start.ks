@@ -5,8 +5,9 @@
 // Lic. Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)
 // setting objects to acces buttons and buttonlabel
 
+set config:ipu to 500.
 wait until ship:unpacked.
-wait 1.5.
+wait 3.
 runPath ("0:/library/lib_KpmAddons.ks").							           // testing new library (label flag and button function)
 runPath ("0:/library/lib_FlashString.ks").                                     // library for animated string
 local but is setKPMapi("B").     					                           // object Buttons			  
