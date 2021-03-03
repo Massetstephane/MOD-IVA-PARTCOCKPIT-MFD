@@ -33,9 +33,10 @@ ______
 - ASET_Avionics-2.1
 - ASET_Props-1.5
 - RasterPropMonitor-v0.31.4
-- kOS-v1.2.1.0 or greater \# *
-- kOSPropMonitor-1.7.1.38388 \# *
 - NearFutureProps_0_6_4
+> Optional *(if you want to use the MFDkos, which remains included in the IVAs)*
+- kOS-v1.2.1.0 or greater 
+- kOSPropMonitor-1.7.1.38388 
 ______
 
 > Supported Mods for module in MFD screen page, (The pages of these modules are already embedded in the cfg file)
