@@ -1,4 +1,4 @@
-// It's a try to avoid the problem i have found with Primitive_triangle in ASET folder
+// It's a try to avoid the problem i have found with Primitive_triangle in ASET folder not resolved yet
 Recompiled Primitive :
 - Primitive_TRIANGLE.mu
 - Primitive_TRIANGLE_90.mu
