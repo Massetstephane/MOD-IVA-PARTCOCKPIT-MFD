@@ -32,5 +32,6 @@ _____
 - [X] Control Altitude level
 - [X] Landing Mod
 - [X] using MFD buttons and labels
+- [ ] Try to use the Ziegler-Nichols method (wiki) to apply methode no overshot WIP bugged 
 - [ ] Stopped and stabilized the aircraft in flight and maintain a position (Currently only the attitude of the ship is controlled)
 - [X] Save variables in a file for a type of aircraft (Remember parameters for this type of aircraft)
