@@ -3,28 +3,23 @@
 // ------------------------------------------------------------------
 // Copyright © 2021 Masset Stephane 
 // Lic. Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)
-// setting objects to acces buttons and buttonlabel
-
+// V 1.0 (now using PRIMARY MFD buttons for actions)
+//
 set config:ipu to 500.
 wait until ship:unpacked.
-wait 3.
-runPath ("0:/library/lib_KpmAddons.ks").							           // testing new library (label flag and button function)
-runPath ("0:/library/lib_FlashString.ks").                                     // library for animated string
-local but is setKPMapi("B").     					                           // object Buttons			  
-local lab is setKPMapi("L").  						                           // object lab for text and state.
-lab["initLF"](0.05).                                                           // set label test cosmetic start
+wait 6.
+runoncePath ("0:/library/lib_KpmAddons.ks").							       // testing new library (label flag and button function)
+runoncePath ("0:/library/lib_FlashString.ks").                                 // library for animated string
+set but to setKPMapi("B").     		    			                           // object Buttons			  
+set lab to setKPMapi("L").  						                           // object lab for text and state.
+lab["initLF"](0.06).                                                           // set label test cosmetic start
 // delegate buttons
-but["dele"](7, Bup@).                                                          // Choice Indicator UP
-but["dele"](8, Bdown@).                                                        // Choice Indicator DOWN
-but["dele"](9, Benter@).                                                       // Validate Choice
-but["dele"](10, exitstart@).                                                   // Exit button
-// setting labels txt
-lab["setTXT"](7, " UP ").
-lab["setTXT"](8, " DOWN").
-lab["setTXT"](9, " ENTER").
-lab["setTXT"](10, " EXIT").
+but["dele"](-3, Bup@).                                                         // Choice Indicator UP
+but["dele"](-4, Bdown@).                                                       // Choice Indicator DOWN
+but["dele"](-1, Benter@).                                                      // Validate Choice
+but["dele"](-2, exitstart@).                                                   // Exit button
 // setting label state
-lab["setSTA"](9, false).
+lab["setSTA"](-2, false).
 set activeFunc to false.
 set config:audioerr to true.
 clearScreen.
@@ -58,9 +53,9 @@ until i=ProgNumber
 	set i to i+1.
 }.
 // flashing cursor object
-set indicator to Flashthing("O", " ", 0.7).
+set indicator to Flashthing("O", " ", 0.5).
 // Main Program
-until lab["getSTA"](9) 
+until lab["getSTA"](-2) 
 {
     indicator["FlashSTR"](4, current_option+deltaPos).                          // Placing flashing Indicator.
     if activeFunc
@@ -68,13 +63,11 @@ until lab["getSTA"](9)
         copyPath(ListProg[current_option], "1:").
         switch to 1.
         clearScreen.
-        but["dele"](10, nothing@).                                              // For it"s the only way i find to deactivate button
         runPath (ListProg[current_option]).
-        lab["setSTA"](9, true).
     }
     wait 0.001.  
 }.
-lab["Reset"]().
+//lab["Reset"]().
 switch to 0.
 clearScreen.
 print "-Vers :" + core:version + " -Disk : " + core:volume.
@@ -110,13 +103,10 @@ function Benter
 {
     set activeFunc to true.
 }
-// ---- Cancel the previous function ----
-function nothing                            
-{}
 // ---- exit ----
 function exitstart
 {
     clearscreen.
-    lab["setSTA"](9, true).
+    lab["setSTA"](-2, true).
 }
 // end file
