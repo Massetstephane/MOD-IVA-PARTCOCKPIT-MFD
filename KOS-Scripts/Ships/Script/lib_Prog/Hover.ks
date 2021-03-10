@@ -20,20 +20,25 @@ set NameAircrafFile to ship:shipName.
 set hoVers to "V5.0".												// version tag
 set Convertnumber to "".											// emptystring+number force string
 set bound_Box to ship:bounds.                         				// ship volume
-lock AltiRad to bound_Box:bottomaltradar.							// Altitude radar under ship
-lock Altisea to bound_Box:bottomalt.								// Altitude Sealevel under ship
+lock AltiRad to bound_Box:bottomaltradar.							// Current Altitude radar under ship
+lock Altisea to bound_Box:bottomalt.								// Current Altitude Sealevel under ship
 lock curent_Alt to AltiRad.											// Set to radar by default
 set CurentThrottle to ship:control:pilotmainthrottle. 				// keep actual throttle
 set DeltaMaxMin to -0.1.							  				// to increase or decrease defaut -0.1
 set running to false.								  				// Main hover boucle is on
 set timerTime to 0.3.								  				// delta time for flashing label text one time
 set onepass to true.								  				// SAS switch
-set KP to 0.4.
-set KI to 0.02.
-set KD to 0.02.
+set M to 0.															// Amplitude Ratio -> searching to find the value
+set TU to 1.														// Mesured period (second i presume) -> same
+set TUcheck to true.												// First TU calcul on start true
+lock Ku to 1 / M.													// Optimal Gain
+lock KP to 0.2 * Ku.												// Ziegler-Nichols method no overshoot setup
+lock KI to (2 * KP)/ TU.											// same
+lock KD to (KP * TU) / 3.											// same
 set MINthr to 0.									  				// throttle PID MINOUTPUT
 set MAXthr to 0.95.									  				// throttle PID MAXOUTPUT
-set MINVstest to -5.												// Verticale speed output parameter (variable depend altitude)								
+set MINVspeed to -5.												// Verticale speed PID MINOUTPUT (default start)
+set MAXVspeed to 5.													// Verticale speed PID MAXOUTPUT								
 set TargetVertSpeed to 0.											// set target speed to 0 (stationary)
 set FactorVspeedLand to -10.										// control the descent speed (depending reaction time motor)
 
@@ -63,6 +68,10 @@ for n in savedfile
 			n:writeln(Convertnumber+MAXthr).
 			n:writeln("FactorVspeedLan").
 			n:writeln(Convertnumber+FactorVspeedLand).
+			n:writeln("AmplitudeRatio").
+			n:writeln(Convertnumber+M).
+			n:writeln("MesuredPeriod").
+			n:writeln(Convertnumber+TU).
 			n:write("endfile").
 			break.
 		} else																		// parameter updated with data in file 
@@ -79,7 +88,9 @@ for n in savedfile
 				}				
 				set MINthr to filedatalexicon:MINthr.								// update value from file
 				set MAXthr to filedatalexicon:MAXthr.
-				set FactorVspeedLand to filedatalexicon:FactorVspeedLan.					
+				set FactorVspeedLand to filedatalexicon:FactorVspeedLan.
+				set M to filedatalexicon:AmplitudeRatio.
+				set TU to filedatalexicon:MesuredPeriod.					
 			}
 	}		
 }
@@ -99,22 +110,23 @@ set CtrlLight to MovPartOBJ("CtrlLandL", "ModuleRoboticController", "Activer la 
 
 // ---- pidLoop(KP, KI, KD, MINOUTPUT, MAXOUTPUT) ----
 set hoverPID to pidLoop(KP, KI, KD, MINthr, MAXthr).  				// set pidloop for throttle
-set VertSpPID to pidLoop(0.3,0.02,0.02, -5, 5).		  				// set pidloop for target vertical speed
-set hoverPID:setpoint to TargetVertSpeed.			  				// The current setpoint vertical speed
+set VertSpPID to pidLoop(KP, KI, KD, MINVspeed, MAXVspeed).			// set pidloop for target vertical speed default
+set hoverPID:setpoint to 0.							  				// set vertical speed setpoint to 0 on start
 
 // ----    setting the altitude on start depend choice off user    ----
 // ---- prevent falling ship if script started with ship is flying ----
 set seekAlt to choose AltiRad if inpuTaltitude = 0 else inpuTaltitude.
 if seekAlt > 1000 {set seekAlt to 1000.}
-set VertSpPID:setpoint to seekAlt.					  				// the choosed altitude setpoint
+set VertSpPID:setpoint to seekAlt.					  				// the choosed altitude setpoint at start
+set checkseekALT to seekAlt.										// store first value before is change later (user input new altitude)
 
 // ---- setting objects to acces buttons and buttonlabel ----
 set button to setKPMapi("B").							  			// object Buttons			  
 set label to setKPMapi("L").							  			// object label for text and state
 label["Reset"]().													// clean label
 
-// ---- setting Planet and calcul TWRMAX for designed MOTORS
-set TotalTWTVtolengs to calTWRVtol().
+// ---- setting Planet ----
+set actualPlanet to FindPlanet().									// setting body to calcul TWR max
 
 // ---- setting button & state ----
 label["setTXT"](0, " [hw][#00ff00ff]radAlt[#CEE3F6FF][/hw] ").      // show actual radar mode
@@ -167,19 +179,21 @@ set SeekAl13Fl to Flashthing("[#ff0000ff]      Alt-1", "[#CEE3F6FF]      Alt-1 "
 lock throttle to CurentThrottle.
 sas on.
 
-// ---- Display main screen Structure ----
+// ---- Display main screen Structure First Pass ----
 Main_Screen().
-
-//                             ------------ Main hover Boucle -------------
-
 InfoHud("* hover Controle on *", red).
+//
+//                             ------------ Main hover Boucle -------------
+// 
+set Total_TWR_Vtolengs to CalcTWRMax("POSSIBLETHRUST").									// Max TWR at full condition
+if M = 0 set M to Total_TWR_Vtolengs.													// setting the amplitude Ratio if not defined(0)
 until running                              			  									// Start on
  {
 	set TargetVertSpeed to VertSpPID:update(time:seconds, curent_Alt).					// actualise vertical speed vs altitude
 	set hoverPID:setpoint to TargetVertSpeed.											// set setpoint of throttle pidloop
 	set CurentThrottle to hoverPID:update(time:seconds, ship:verticalspeed).			// update throttle pidloop
 	AjustVertSpeedMin().																// Contrôle Minoutput for VertSpPID
-	
+	if TUcheck and checkseekALT <> seekAlt CalTu(time:seconds).							// start the calcul for TU parameter if condition true	
 	//---- show selection radar or sea level control altitude to desired altitude ----
 	if label["getSTA"](0)																// mode radar
 		{
@@ -276,8 +290,8 @@ function landingButton
 	stop().
 }.
 
-// ---- function to calculate TWR only for selected VTOL engines ----
-function calTWRVtol
+// ---- function to choose the planet ----
+function FindPlanet
 {
 	// ===================== setting variables ======================
 	local bu is setKPMapi("B").
@@ -295,6 +309,9 @@ function calTWRVtol
 	lb["setTXT"](8, " DOWN").
 	lb["setTXT"](9, " ENTER").
 
+	// setting state of ENTER
+	lb["setSTA"](9, false).
+
 	// delegate buttons
 	bu["dele"](7, Bup@).                                                           	// Choice Indicator UP
 	bu["dele"](8, Bdown@).                                                        	// Choice Indicator DOWN
@@ -311,7 +328,7 @@ function calTWRVtol
 
 	// ---- Main loop choice ----
 	print "index : " + index at(30,4).
-	until label["getSTA"](9) 
+	until lb["getSTA"](9) 
 	{
 		indicator["FlashSTR"](8, current_option + decal).                          	// Moving flashing Indicator.
 		print "current option : " + PlanetLst[current_option] + "  " at(30,5).
@@ -319,18 +336,8 @@ function calTWRVtol
 		{        
 			// active planet
 			clearScreen.
-			local actualPlanet is PlanetLst[current_option].
-			// acceleration
-			local g is actualPlanet:mu / actualPlanet:RADIUS^2.
-			// retieve engine in ship TAG: VTOL
-			list engines in listengine.
-			local totalThrust is 0.
-			for eng in listengine
-			{
-				if eng:tag = "VTOL"	{ set totalThrust to totalThrust + eng:maxthrust. }
-			}
 			lb["Reset"]().															// clean labels
-			return totalThrust / (ship:mass * g).
+			return PlanetLst[current_option].
 		}
 		wait 0.001.  
 	}.
@@ -361,31 +368,81 @@ function calTWRVtol
 	local function Benter // validate choice
 	{
 		set calTWR to true.
+		lb["setSTA"](9, true).
 	}
 }
 
-// ---- adjustement for pidloop Min output Vspeed/altitude ----
+// ---- function to calculate TWR only for selected VTOL engines ----
+function CalcTWRMax
+{
+	local parameter a is "THRUST".													// if no parameter eng:THRUST is calculated
+	 
+	// acceleration
+	local g is actualPlanet:mu / actualPlanet:RADIUS^2.
+	// retieve engine in ship TAG: VTOL
+	list engines in listengine.
+	local totalThrust is 0.
+	for eng in listengine
+	{
+		
+		if eng:tag = "VTOL"	and a = "POSSIBLETHRUST"
+		{ set totalThrust to totalThrust + eng:POSSIBLETHRUST. } else
+			{ set totalThrust to totalThrust + eng:THRUST. }
+	}
+	return totalThrust / (ship:mass * g).
+}
+
+// ---- function to determine the Mesured Period TU based on time reached to full TWR
+function CalTu
+{
+	parameter stTime.
+	lock actualtwr to CalcTWRMax().
+	wait until actualtwr >= Total_TWR_Vtolengs.
+	set TU to (time:seconds - stTime).
+	actualVertSpPID().
+	actualHoverPid().
+	set TUcheck to false.
+}
+
+// ======     PidLoop       Functions adjustement     =====
+// ---- set SETPOINT for the two pidloop ----
+function actualSetpoint
+{ 
+	set hoverPID:setpoint to TargetVertSpeed.
+	set VertSpPID:setpoint to seekAlt.
+}.
+
+// ---- Actualise hoverPIDloop throttle control ----
+function actualHoverPid
+{ set hoverPID to pidLoop(KP, KI, KD, MINthr, MAXthr). }
+
+// ---- Actualise VertSpPIDloop vertical speed control ----
+function actualVertSpPID
+{ 
+	parameter min.
+	set VertSpPID to pidLoop(KP , KI, KD, min, MAXVspeed).
+}
+// ---- adjustement for VertSpPIDloop Min output ----
 function AjustVertSpeedMin
 {
-	set setpointcheck to false.
-	if curent_Alt > 300 and MINVstest <> -5
-	{ actualMinVsp(-5). settrue(-5).} else
-	if curent_Alt > 200 and MINVstest <> -4
-	{ actualMinVsp(-4). settrue(-4).} else
-	if curent_Alt > 100 and MINVstest <> -2.5
-	{ actualMinVsp(-2.5). settrue(-2.5).} else
-	if curent_Alt <= 50 and MINVstest <> -1
-	{ actualMinVsp(-1). settrue(-1).}
-	if setpointcheck actualSetpoint().
+	set setpointcheck to false.														// First Pass
+	if curent_Alt > 300 and MINVspeed <> -5											// check altitude > 300 & MINVspeed changed or not changed
+	{ actualVertSpPID(-5). settrue(-5).} else											// Update PIDloop and store actual MINVspeed
+	if curent_Alt > 200 and MINVspeed <> -4											// check for > 200
+	{ actualVertSpPID(-4). settrue(-4).} else											// update
+	if curent_Alt > 100 and MINVspeed <> -2.5										// check for > 100
+	{ actualVertSpPID(-2.5). settrue(-2.5).} else										// update
+	if curent_Alt <= 50 and MINVspeed <> -1											// check for <= 50
+	{ actualVertSpPID(-1). settrue(-1).}												// update
+	if setpointcheck actualSetpoint().												// if MINVspeed has changed update PIDloop
 	wait 0.001.
 	//
-	local function settrue
+	local function settrue															// store MINVspeed and activate Update
 	{ 
 		parameter check.
-		set MINVstest to check.
+		set MINVspeed to check.
 		set setpointcheck to true.
 	}
-
 }
 
 // ---- input altitude keyboard ----
@@ -427,16 +484,16 @@ function RadarMode
 		label["setTXT"](0, " [hw][#00ff00ff]seaAlt[#CEE3F6FF][/hw] ").
 		label["setSTA"](0, false).
 		button["dele"](0, RadarModeB:bind(label["getSTA"](0))).
-		set seekAlt to Altisea.						  // to keep altitude level
-		lock curent_Alt to Altisea.					  // curent altitude set to sea level
+		set seekAlt to Altisea.						  								// to keep altitude level
+		lock curent_Alt to Altisea.					  								// curent altitude set to sea level
 		actualSetpoint().
 	} else
 	{
 		label["setTXT"](0, " [hw][#00ff00ff]radAlt[#CEE3F6FF][/hw] ").
 		label["setSTA"](0, true).
 		button["dele"](0, RadarModeB:bind(label["getSTA"](0))).
-		set seekAlt to AltiRad.						  // to keep altitude level
-		lock curent_Alt to AltiRad.					  // curent altitude set to radar level
+		set seekAlt to AltiRad.						  								// to keep altitude level
+		lock curent_Alt to AltiRad.					  								// curent altitude set to radar level
 		actualSetpoint().
 	}.
 	playNoteF("d4", "r4").
@@ -471,7 +528,7 @@ function FuncMINthr
 	set MINthr to MINthr + DeltaMaxMin.
 	if Minthr < 0 set MINthr to 0.                    // not negative value.
 	if MINthr > 1 set MINthr to 1.                	  // max value 1 
-	actualMAxMInOut().
+	actualHoverPid().
 	MinthFlash["FlashLFOne"]().
 }.
 
@@ -481,7 +538,7 @@ function FuncMAXthr
 	set MAXthr to MAXthr + DeltaMaxMin.
 	if MAXthr < 0 set MAXthr to 0.                	  // not negative value
 	if MAXthr > 1 set MAXthr to 1.					  // max value 1
-	actualMAxMInOut().
+	actualHoverPid().
 	MaxthFlash["FlashLFOne"]().
 }.
 
@@ -546,25 +603,6 @@ function SeekAlBut13	// button 13
 	SeekAl13Fl["FlashLFOne"]().
 }.
 
-// ====== PidLoop Functions adjustement =====
-// ---- set pidloop value to current modification ----
-function actualSetpoint
-{ 
-	set hoverPID:setpoint to TargetVertSpeed.
-	set VertSpPID:setpoint to seekAlt.
-}.
-
-// ---- set the Min and Max output for throttle ----
-function actualMAxMInOut
-{ set hoverPID to pidLoop(KP, KI, KD, MINthr, MAXthr). }
-
-// ---- set the Min for vertical speed pidloop ----
-function actualMinVsp
-{ 
-	parameter min.
-	set VertSpPID to pidLoop(0.3 ,0.02 ,0.02, min, 4).
-}
-
 // ================ Display Functions ================
 // ---- main screen display ----
 function Main_Screen
@@ -624,7 +662,7 @@ function Aff_Values
 	// Landing Factor Vertical speed
 	print FactorVspeedLand + "  " at (27, startRow + 15).
 	// Show the TWR for engine used for scrip hover
-	print "[#33FF00]" + round(TotalTWTVtolengs,2) at(26, 8).
+	print "[#33FF00]" + round(Total_TWR_Vtolengs,2) at(26, 8).
 }.
 
 // ----          SOUNDS MANAGEMENT			 ----
