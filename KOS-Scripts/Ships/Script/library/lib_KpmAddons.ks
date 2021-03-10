@@ -2,8 +2,17 @@
 // ----   Library addons:kpm  user Function for LABEL BUTON & FLAG   ----
 // ----------------------------------------------------------------------
 // Copyright © 2021 Masset Stephane 
-// Lic. Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)
-
+// Lic. MIT
+// setting objects to acces buttons and buttonlabel
+// ---- list MFD buttons index ----
+//  (-1) -> enterButton         : addons:kpm:labels:getstate(-1) get state of button.
+//  (-2) -> cancelButton        : addons:kpm:labels:setstate(-2) set state of button
+//  (-3) -> upButton
+//  (-4) -> downButton
+//  (-5) -> leftButton
+//  (-6) -> rightButton
+//  (0 - 13) other buttons
+//
 @lazyGlobal off.
 
 // Main function Constructor Object KPM (button, label or flag)
