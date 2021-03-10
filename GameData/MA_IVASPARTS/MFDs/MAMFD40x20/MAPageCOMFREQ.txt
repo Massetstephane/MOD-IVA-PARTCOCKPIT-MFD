@@ -1,0 +1,20 @@
+[hw][font0][#77FF77FF]------------------- [#FFFF33FF]R A D I O info : ILS , VOR DME , [font2]COM[font0] [#77FF77FF]--------[font2]P6[font0]---------------
+
+              [#33FF00FF][font1]COM frequency[font0]
+              [#FFFFFFFF][sup][@y-10]_____________
+
+
+  [#0000CCFF]===============
+    [#646464FF][hw]APP[/hw][#FFFF33FF]   127.50
+
+    [#646464FF][hw]TWR[/hw][#FFFF33FF]   122.00
+
+    [#646464FF][hw]GND[/hw][#FFFF33FF]   121.70
+
+    [#646464FF][hw]ATIS[/hw][#FFFF33FF]   131.30	
+  [#0000CCFF]===============
+
+
+[#FFFFFFFF][sup][@y-5]__[/sup][font2][#00FF00FF] [hw][@y-6]Retour
+
+[hw][font0][#CEE3F6FF]    Button:[#00CC33FF] PREV[#CEE3F6FF] page precedente.

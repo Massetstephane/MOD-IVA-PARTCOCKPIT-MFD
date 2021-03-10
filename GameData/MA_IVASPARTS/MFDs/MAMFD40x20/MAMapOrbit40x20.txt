@@ -1,0 +1,20 @@
+[hw][font0]  [#CEE3F6FF] PFD ADI [#FFFFFFFF]|[#CEE3F6FF] TARGET [#FFFFFFFF]|[#98cdf9ff][font2]ORB [#ffff33ff]1[font0][#CEE3F6FF]/2/3 [#FFFFFFFF]|[#CEE3F6FF]MJ/SAS/ASTR[#FFFFFFFF]|[#CEE3F6FF]GRAPHS 1/2[#ffffffff]|[#CEE3F6FF]VESL.VIEW [#FFFFFFFF]|[#CEE3F6FF]RESC.ST/TOT
+[#FFFFFFFF]BODY: [#FFFF00FF]{0} $&$ ORBITBODY 
+[#FFFFFFFF]VEL:     [#FFFF00FF]{0:SIP_6.1}m/s  [#FFFFFFFF]ALT:   [#FFFF00FF]{1:SIP_6.3}m  $&$ORBTSPEED ALTITUDE
+{1:"";"                                                            ";""}[#FFFFFFFF]ApA: [#FFFF00FF]{0:SIP_6.1}m   [#FFFFFFFF]INC: [#FFFF00FF]{2:0.000}°  	$&$APOAPSIS  ORBITMAKESSENSE INCLINATION
+{1:"";"                                                            ";""}[#FFFFFFFF]PeA: [#FFFF00FF]{0:SIP_6.1}m   [#FFFFFFFF]ECC: [#FFFF00FF]{2:0.000}  	$&$PERIAPSIS  ORBITMAKESSENSE ECCENTRICITY
+
+
+
+
+
+
+
+
+
+
+	
+{1:"";"                                                            ";""}[#FFFFFFFF] ApT:[#FFFF00FF]{0:MET-dd:hh:mm:ss.f}  [#FFFFFFFF]AN:[#FFFF00FF]{2:MET-dd:hh:mm:ss.f} 	$&$TIMETOAPSECS  ORBITMAKESSENSE TIMETOANEQUATORIAL 
+{1:"";"                                                            ";""}[#FFFFFFFF] PeT:[#FFFF00FF]{0:MET-dd:hh:mm:ss.f}  [#FFFFFFFF]DN:[#FFFF00FF]{2:MET-dd:hh:mm:ss.f}  	$&$TIMETOPESECS  ORBITMAKESSENSE TIMETODNEQUATORIAL 
+{1:"";"                                                            ";""}[#FFFFFFFF]  OP:[#FFFF00FF]{0:MET-dd:hh:mm:ss.f}  																	$&$ORBPERIODSECS ORBITMAKESSENSE
+[hw][#CEE3F6FF][font0] FLIGHT/LNDG [#FFFFFFFF]|[#CEE3F6FF]ORBIT+DISP[#FFFFFFFF]|[#CEE3F6FF]DOCK+/DPAI[#FFFFFFFF]|[#CEE3F6FF] SHIP/LOG [#FFFFFFFF]|[#CEE3F6FF] CREW/AcGr [#FFFFFFFF]|[#CEE3F6FF] POD CAMS [#FFFFFFFF]|[#CEE3F6FF] EXTRA CAMS 

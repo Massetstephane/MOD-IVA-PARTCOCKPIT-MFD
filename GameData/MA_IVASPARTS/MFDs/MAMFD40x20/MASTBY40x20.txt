@@ -1,0 +1,20 @@
+[hw][font0]  [#CEE3F6FF] PFD ADI [#FFFFFFFF]|[#CEE3F6FF] TARGET [#FFFFFFFF]|[#CEE3F6FF]NAV 1/2/3 [#FFFFFFFF]|[#CEE3F6FF]MJ/SAS/ASTR[#FFFFFFFF]|[#CEE3F6FF]GRAPHS 1/2[#FFFFFFFF]|[#CEE3F6FF]VESL.VIEW [#FFFFFFFF]|[#CEE3F6FF] RESC.ST/TOT
+
+[@x202][@y13][font1][hw][sup][#33ff33ff]ASET Props (1.5) [#ffffffff]by [font2][#c7c7c7ff][@y12]Alexustas
+	
+           [@x-2][#81BEF7FF]««««««««««««««««««
+			  
+    [@y13][@x-8][font1]Powered by  JSI RasterPropMonitor[font0]			  
+             [@y12][#81BEF7FF]v {0} $&$ RPMVERSION
+
+
+    [@y4][hw][#ffffffc8][font1][sup]_[/sup] MechJeb2    charged : {0:"[font2][#01ff07FF]YES";;"[font0][#fffffffa]NO"} $&$ ISLOADED_MECHJEB2
+    [@y4][hw][#ffffffc8][font1][sup]_[/sup] SCANsat     charged : {0:"[font2][#01ff07FF]YES";;"[font0][#fffffffa]NO"} $&$ ISLOADED_SCANSAT
+    [@y4][hw][#ffffffc8][font1][sup]_[/sup] VesselView  charged : {0:"[font2][#01ff07FF]YES";;"[font0][#fffffffa]NO"} $&$ ISLOADED_VESSELVIEW
+    [@y4][hw][#ffffffc8][font1][sup]_[/sup] NavUtilRPM  charged : {0:"[font2][#01ff07FF]YES";;"[font0][#fffffffa]NO"} $&$ ISLOADED_NAVUTILRPM  
+    [@y4][hw][#ffffffc8][font1][sup]_[/sup] Astrogator  charged : {0:"[font2][#01ff07FF]YES";;"[font0][#fffffffa]NO"} $&$ ISLOADED_ASTROGATOR
+    [@y4][hw][#ffffffc8][font1][sup]_[/sup] DPAI_RPM    charged : {0:"[font2][#01ff07FF]YES";;"[font0][#fffffffa]NO"} $&$ ISLOADED_DPAI_RPM
+
+                              [@y-6][@x7][#00FF00FF][font2][hw]RADIO INFO FREQ[/hw][font0][#FFFFFFFF][@y-5][sup]__   
+[#ffff14ff][font1][hw] Version IVA : {0} [@x25] Cockpit type : {1} $&$ STOREDSTRING_0 STOREDSTRING_2  
+[hw][#CEE3F6FF][font0] FLIGHT/LNDG [#FFFFFFFF]|[#CEE3F6FF]ORBIT+DISP[#FFFFFFFF]|[#CEE3F6FF]DOCK+/DPAI[#FFFFFFFF]|[#CEE3F6FF] SHIP/LOG [#FFFFFFFF]|[#CEE3F6FF] CREW/AcGr [#FFFFFFFF]|[#CEE3F6FF] POD CAMS [#FFFFFFFF]|[#CEE3F6FF] EXTRA CAMS	 
