@@ -5,3 +5,4 @@
 ----------------------------
 
 - animated buttons, brightness screen, MFD associed with KPM addon 
+- updated added Page file Button
