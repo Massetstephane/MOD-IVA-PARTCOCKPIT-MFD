@@ -6,94 +6,55 @@
 // Copyright © 2021 Masset Stephane 
 // Lic. Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)
 
-parameter inpuTaltitude is 0.                         				// base height if nothing enter
+parameter inpalt is 0,  		                       								// base height if nothing enter
+		  vTn 	 is "VTOL".															// Default name tag for motor (search)
 // ---- My user functions in library folder ----
-runPath ("0:/library/lib_KpmAddons.ks").							// testing new library (label flag and button function)
-runPath ("0:/library/lib_FlashString.ks").							// library function for string & label effects
-runPath ("0:/library/lib_MovePart.ks").	    						// library perform action & event
+runPath ("0:/library/lib_KpmAddons.ks").											// testing new library (label flag and button function)
+runPath ("0:/library/lib_FlashString.ks").											// library function for string & label effects
+runPath ("0:/library/lib_MovePart.ks").	    										// library perform action & event
 // ---- user function kos library ----
-runPath ("0:/library/lib_input_terminal").			  				// for input altitude
-runpath ("0:/library/lib_navball").					  				// library function for fly data
+runPath ("0:/library/lib_input_terminal").			  								// for input altitude
+runpath ("0:/library/lib_navball").					  								// library function for fly data
 
 // ===================== setting variables ======================
-set NameAircrafFile to ship:shipName.
-set hoVers to "V5.0".												// version tag
-set Convertnumber to "".											// emptystring+number force string
-set bound_Box to ship:bounds.                         				// ship volume
-lock AltiRad to bound_Box:bottomaltradar.							// Current Altitude radar under ship
-lock Altisea to bound_Box:bottomalt.								// Current Altitude Sealevel under ship
-lock curent_Alt to AltiRad.											// Set to radar by default
-set CurentThrottle to ship:control:pilotmainthrottle. 				// keep actual throttle
-set DeltaMaxMin to -0.1.							  				// to increase or decrease defaut -0.1
-set running to false.								  				// Main hover boucle is on
-set timerTime to 0.3.								  				// delta time for flashing label text one time
-set onepass to true.								  				// SAS switch
-set M to 0.															// Amplitude Ratio -> searching to find the value
-set TU to 1.														// Mesured period (second i presume) -> same
-set TUcheck to true.												// First TU calcul on start true
-lock Ku to 1 / M.													// Optimal Gain
-lock KP to 0.2 * Ku.												// Ziegler-Nichols method no overshoot setup
-lock KI to (2 * KP)/ TU.											// same
-lock KD to (KP * TU) / 3.											// same
-set MINthr to 0.									  				// throttle PID MINOUTPUT
-set MAXthr to 0.95.									  				// throttle PID MAXOUTPUT
-set MINVspeed to -5.												// Verticale speed PID MINOUTPUT (default start)
-set MAXVspeed to 5.													// Verticale speed PID MAXOUTPUT								
-set TargetVertSpeed to 0.											// set target speed to 0 (stationary)
-set FactorVspeedLand to -10.										// control the descent speed (depending reaction time motor)
+local NaAircraf is ship:shipName.												// name of vessel
+set FullNameAircraft to NaAircraf + ".txt".									// Full name of saved file
+set VTOLname to vTn.																// set vtol engine name
+set hoVers to "V5.0".																// version tag
+set bound_Box to ship:bounds.                         								// ship volume
+lock AltiRad to bound_Box:bottomaltradar.											// Current Altitude radar under ship
+lock Altisea to bound_Box:bottomalt.												// Current Altitude Sealevel under ship
+lock curent_Alt to AltiRad.															// Set to radar by default
+set CurentThrottle to ship:control:pilotmainthrottle. 								// keep actual throttle
+set DeltaMaxMin to -0.1.							  								// to increase or decrease defaut -0.1
+set running to false.								  								// Main hover boucle is on
+set timerTime to 0.3.								  								// delta time for flashing label text one time
+set onepass to true.								  								// SAS switch
+set M to 0.																			// Amplitude Ratio -> searching to find the value
+set TU to 1.																		// Mesured period (second i presume) -> same
+set TUcheck to true.																// First TU calcul on start true
+lock Ku to 1 / M.																	// Optimal Gain
+lock KP to 0.2 * Ku.																// Ziegler-Nichols method no overshoot setup
+lock KI to (2 * KP)/ TU.															// same
+lock KD to (KP * TU) / 3.															// same
+set MINthr to 0.									  								// throttle PID MINOUTPUT
+set MAXthr to 0.95.									  								// throttle PID MAXOUTPUT
+set MINVspeed to -5.																// Verticale speed PID MINOUTPUT (default start)
+set MAXVspeed to 5.																	// Verticale speed PID MAXOUTPUT								
+set TargetVertSpeed to 0.															// set target speed to 0 (stationary)
+set FactorVspeedLand to -10.														// control the descent speed (depending reaction time motor)
 
 // ---- Checking if parameter saved file exist if not create it ----
-switch to 0.
-set vol to core:currentvolume.
-set SavedParamAircrFile to (NameAircrafFile + ".txt").
-if not vol:EXISTS("AircraftParM")													// check if folder exist or creat it
-{
-	vol:createdir("AircraftParM").
-	CD("0:/AircraftParM").
-} else CD("0:/AircraftParM").
-//																					// Create file if not exist
-if not vol:exists("AircraftParM/"+SavedParamAircrFile) vol:create("AircraftParM/"+SavedParamAircrFile).
-LIST FILES IN savedfile.															// store file in list (parameter folder)
-for n in savedfile
-{
-	if n:name = SavedParamAircrFile 												// search if aircraft parameter file present
-	{
-		local filecontain is n:readall.
-		if filecontain:empty														// file empty loading default parameter format
-		{
-			n:clear().
-			n:writeln("MINthr").
-			n:writeln(Convertnumber+MINthr).
-			n:writeln("MAXthr").
-			n:writeln(Convertnumber+MAXthr).
-			n:writeln("FactorVspeedLan").
-			n:writeln(Convertnumber+FactorVspeedLand).
-			n:writeln("AmplitudeRatio").
-			n:writeln(Convertnumber+M).
-			n:writeln("MesuredPeriod").
-			n:writeln(Convertnumber+TU).
-			n:write("endfile").
-			break.
-		} else																		// parameter updated with data in file 
-			{
-				set parseline to filecontain:iterator.								// to read by line
-				set filedatalexicon to lexicon().
-				until not parseline:next
-				{
-					local key is parseline:value.									// set lexicon key to string
-					if key = "endfile" break.										// exit end file reached
-					parseline:next.													// step to value
-					local value is parseline:value.									// set lexicon value to string
-					set filedatalexicon[key] to value:TONUMBER().					// create index & value
-				}				
-				set MINthr to filedatalexicon:MINthr.								// update value from file
-				set MAXthr to filedatalexicon:MAXthr.
-				set FactorVspeedLand to filedatalexicon:FactorVspeedLan.
-				set M to filedatalexicon:AmplitudeRatio.
-				set TU to filedatalexicon:MesuredPeriod.					
-			}
-	}		
-}
+// ----      And create a LEXICON of data for save or read      ----
+// ----          Or update LEXICON from existing file			----
+set FileDatas to lexicon(
+		"MINthr", 			MINthr,
+		"MAXthr", 			MAXthr,
+		"FactorVspeedLand", FactorVspeedLand,
+		"AmplitudeRatio", 	M,
+		"MesuredPeriod", 	TU).
+switch to 0.														// NOT in boot directory and local ship store
+LoadStoreDat(FullNameAircraft, FileDatas).							// Update or save Datas
 
 // ----          sounds             ----
 set Sound1 to getVoice(0).											// button sound
@@ -115,7 +76,7 @@ set hoverPID:setpoint to 0.							  				// set vertical speed setpoint to 0 on s
 
 // ----    setting the altitude on start depend choice off user    ----
 // ---- prevent falling ship if script started with ship is flying ----
-set seekAlt to choose AltiRad if inpuTaltitude = 0 else inpuTaltitude.
+set seekAlt to choose AltiRad if inpalt = 0 else inpalt.
 if seekAlt > 1000 {set seekAlt to 1000.}
 set VertSpPID:setpoint to seekAlt.					  				// the choosed altitude setpoint at start
 set checkseekALT to seekAlt.										// store first value before is change later (user input new altitude)
@@ -133,7 +94,6 @@ label["setTXT"](0, " [hw][#00ff00ff]radAlt[#CEE3F6FF][/hw] ").      // show actu
 label["setTXT"](1, "[hw] LANDING[/hw] ").							// Mode landing label
 label["setTXT"](3, " [hw]Input[/hw]  ").							// Input altitude
 label["setTXT"](4, "[hw][#ff0000ff]StabOFF  ").						// Mode stab
-label["setTXT"](5, "  Stop H[/hw] ").								// exit program
 label["setTXT"](7, " [hw]Minthr").									// Min output pidloop throttle
 label["setTXT"](8, "     Maxthr").									// Max output pidloop throttle
 label["setTXT"](9, "     [#00ff00ff]-[#CEE3F6FF]0.1").				// start sign for Max and Min
@@ -154,7 +114,7 @@ set DeltaMaxMinOutputB to DeltaMaxMinOutput@.
 button["dele"](0, RadarModeB:bind(label["getSTA"](0))).				// function radar mode Button
 button["dele"](1, landingButton@).									// Landing Button
 button["dele"](3, InputAltKeyB@).									// Input altitude Button
-button["dele"](5, stop@).											// Exit Button
+button["dele"](-2, stop@).											// Exit Button
 button["dele"](7, FuncMINthr@).										// Minthr Button
 button["dele"](8, FuncMAXthr@).										// Maxthr Button
 button["dele"](9, DeltaMaxMinOutputB:bind(label["getSTA"](9))).		// Switch sign Button
@@ -185,7 +145,7 @@ InfoHud("* hover Controle on *", red).
 //
 //                             ------------ Main hover Boucle -------------
 // 
-set Total_TWR_Vtolengs to CalcTWRMax("POSSIBLETHRUST").									// Max TWR at full condition
+set Total_TWR_Vtolengs to CalcTWRMax("POSSIBLETHRUST", VTOLname).						// Max TWR at full condition show value in mfd
 if M = 0 set M to Total_TWR_Vtolengs.													// setting the amplitude Ratio if not defined(0)
 until running                              			  									// Start on
  {
@@ -193,7 +153,7 @@ until running                              			  									// Start on
 	set hoverPID:setpoint to TargetVertSpeed.											// set setpoint of throttle pidloop
 	set CurentThrottle to hoverPID:update(time:seconds, ship:verticalspeed).			// update throttle pidloop
 	AjustVertSpeedMin().																// Contrôle Minoutput for VertSpPID
-	if TUcheck and checkseekALT <> seekAlt CalTu(time:seconds).							// start the calcul for TU parameter if condition true	
+	if TUcheck and (checkseekALT <> seekAlt) CalTu(time:seconds).							// start the calcul for TU parameter if condition true	
 	//---- show selection radar or sea level control altitude to desired altitude ----
 	if label["getSTA"](0)																// mode radar
 		{
@@ -253,7 +213,34 @@ core:activate.
 // ==== end script ====
 
 // ======================== Main functions ==========================
-// ---- landing Mode ----
+// ---- Function Save or Read Parameter
+function LoadStoreDat
+{
+	parameter name is "Empty_File",
+			  dat  is lexicon().
+			  
+	set vol to core:currentvolume.
+	if not vol:EXISTS("AircraftParM")												// check if folder exist or creat it
+	{
+		vol:createdir("AircraftParM").
+		CD("0:/AircraftParM").
+	} else CD("0:/AircraftParM").
+	// ---- Create File if not exist or read value from file ----
+	if not vol:exists(name)
+	{	
+		WRITEJSON(dat, name).														// Save lexicon Data
+	} else {
+				local FDs is READJSON(name).										// store lexicon Data from file
+				// update data
+				set MINthr to FDs:MINthr.
+				set MAXthr to FDs:MAXthr.
+				set FactorVspeedLand to FDs:FactorVspeedLan.
+				set M to FDs:AmplitudeRatio.
+				set TU to FDs:MesuredPeriod.			
+			}
+}
+
+// ---- Function landing Mode ----
 function landingButton
 { 
 	if AltiRad > 180 or AltiRad < 40													// check for valid altitude
@@ -375,21 +362,36 @@ function FindPlanet
 // ---- function to calculate TWR only for selected VTOL engines ----
 function CalcTWRMax
 {
-	local parameter a is "THRUST".													// if no parameter eng:THRUST is calculated
-	 
+	local parameter type,
+					name.
+
+	list engines in listengine.														// Retrieve all engine in ship
+	// testing if Motor with KosTag "VTOL" present
+	for eng in listengine
+	{
+		if eng:tag = name {
+			break.
+		} else
+		{
+			hudtext("-No Motors with tag VTOL detected-", 5, 4, 50, red, false).
+			hudtext("       -Program ENDING-", 5, 4, 50, green, false).
+			wait 4.
+			core:activate.															// Reboot to boot file
+		}
+	}
 	// acceleration
 	local g is actualPlanet:mu / actualPlanet:RADIUS^2.
 	// retieve engine in ship TAG: VTOL
-	list engines in listengine.
+	
 	local totalThrust is 0.
 	for eng in listengine
 	{
 		
-		if eng:tag = "VTOL"	and a = "POSSIBLETHRUST"
+		if eng:tag = name and type = "POSSIBLETHRUST"
 		{ set totalThrust to totalThrust + eng:POSSIBLETHRUST. } else
 			{ set totalThrust to totalThrust + eng:THRUST. }
 	}
-	return totalThrust / (ship:mass * g).
+	return totalThrust / (ship:mass * g).											// Formule is Maxthrust/(mass *g)
 }
 
 // ---- function to determine the Mesured Period TU based on time reached to full TWR
@@ -505,16 +507,9 @@ function stop
 	LIST FILES in curentsavedfile.
 	for n in curentsavedfile
 	{
-		if n = SavedParamAircrFile
+		if n = FullNameAircraft
 		{
-			n:clear().
-			n:writeln("MINthr").
-			n:writeln(Convertnumber+round(MINthr, 2)).
-			n:writeln("MAXthr").
-			n:writeln(Convertnumber+round(MAXthr, 2)).
-			n:writeln("FactorVspeedLan").
-			n:writeln(Convertnumber+FactorVspeedLand).
-			n:writeln("endfile").
+			writeJson(FullNameAircraft, "0:/AIRCRAFT/").
 			break.
 		}
 	}
