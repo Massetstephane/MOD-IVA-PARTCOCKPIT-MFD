@@ -3,6 +3,7 @@
 // buttons work now, added input altitude & landing Mode & new library
 // Action and event in selected part module by kos tag ok
 // Main pidloop Parameter are saved in corresponding aircraft file.txt in a special data folder
+// Testing PIdloop methode
 // Copyright © 2021 Masset Stephane 
 // Lic. Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)
 
