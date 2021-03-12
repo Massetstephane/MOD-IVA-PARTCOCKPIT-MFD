@@ -24,3 +24,5 @@
 > Part mu file are not modiifed only interior ( to keep compatibility with Mod who affect Command part file like Restock)
 > 
 > ADDED MM patch -> switch MFDKOS in IVA if KOS & KPM present
+> 
+> ADDED MM patch -> compatibility with ResTock Mod
