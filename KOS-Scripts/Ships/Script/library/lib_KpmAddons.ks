@@ -18,7 +18,8 @@
 // Main function Constructor Object KPM (button, label or flag)
 function setKPMapi
 {
-    parameter choice is "B".
+    parameter choice is "B",
+              objecttoclear is makeObj().
     local object is makeObj().    // object definition
 
     // =================   LABEL & FLAG   ==================
@@ -105,6 +106,12 @@ function setKPMapi
                   funct.
         if choice = "B" { object:setdelegate(ID, funct).} else throwException("BAD object KPM:ADDONS->", "kpm:buttons ").
     }
+    // ----    Button delegate clear assignation      ----
+    function clear
+    {
+        local butid is list(-1, -2, -3, -4, -5, -6, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13).
+        for i in butid {objecttoclear:setdelegate(i, empty@).}
+    }
     // ===========  global current monitor  ============
     function CurentMoni
     {
@@ -146,6 +153,8 @@ function setKPMapi
         parameter a.
         return object:getstate(a).
     }
+    // ---- Empty Function ----
+    function empty {}
     // ---- object error Exception ----
     function throwException {
         parameter info, 
@@ -154,18 +163,19 @@ function setKPMapi
         print info + type + " Needed !".
         print "CTRL+C Abort programme".
         wait 1000.
-    }
+    }    
     //
     // ---- set & get & function delegate ----
     return lexicon(
-        "Reset", setTXTFull@,
-        "setTXT", setTxT@,
-        "getTXT", getTxT@,
-        "setSTA", setSta@,
-        "getSTA", getSta@,
-        "initLF", initLab@,
-        "dele", dele@,
-        "Monitor", CurentMoni@        
+        "Reset",      setTXTFull@,
+        "setTXT",     setTxT@,
+        "getTXT",     getTxT@,
+        "setSTA",     setSta@,
+        "getSTA",     getSta@,
+        "initLF",     initLab@,
+        "dele",       dele@,
+        "clear_dele", clear@,
+        "Monitor",    CurentMoni@        
     ).
 }
 // END FILE

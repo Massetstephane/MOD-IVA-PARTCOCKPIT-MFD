@@ -10,8 +10,8 @@ wait until ship:unpacked.
 wait 6.
 runoncePath ("0:/library/lib_KpmAddons.ks").							       // testing new library (label flag and button function)
 runoncePath ("0:/library/lib_FlashString.ks").                                 // library for animated string
-set but to setKPMapi("B").     		    			                           // object Buttons			  
-set lab to setKPMapi("L").  						                           // object lab for text and state.
+local but to setKPMapi("B").     		    			                           // object Buttons			  
+local lab to setKPMapi("L").  						                           // object lab for text and state.
 lab["initLF"](0.06).                                                           // set label test cosmetic start
 // delegate buttons
 but["dele"](-3, Bup@).                                                         // Choice Indicator UP

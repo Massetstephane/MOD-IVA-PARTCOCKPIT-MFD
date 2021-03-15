@@ -1,6 +1,6 @@
 //:Start 0: no actions
 // Copyright © 2021 Masset Stephane 
-// Lic. Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)
+// Lic. MIT
 set x to 25.
 set y to 5. 
 clearscreen.

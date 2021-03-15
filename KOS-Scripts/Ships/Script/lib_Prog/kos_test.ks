@@ -1,6 +1,6 @@
 //:Test to trying acess kos module in ship
 // Copyright © 2021 Masset Stephane 
-// Lic. Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)
+// Lic. MIT
 clearScreen.
 set kospart to core:element.
 print "- kos:element -".
@@ -25,6 +25,7 @@ print "- test core suffixe -".
 print "- test core:mode -".
 print "mode :" + core:mode.
 wait 5.
+print "- test core ".
 print "- core:activate -".
 core:activate().
 wait 5.

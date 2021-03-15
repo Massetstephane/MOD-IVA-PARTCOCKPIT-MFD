@@ -3,7 +3,7 @@
 // ----         Program To learn Mass and TWR calcul             ----
 // ------------------------------------------------------------------
 // Copyright © 2021 Masset Stephane 
-// Lic. Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)
+// Lic. MIT
 clearScreen.
 // set body
 set Planet to body("Kerbin").
@@ -47,7 +47,7 @@ print "Max thrust for VTOL engine is : " + totalThrust.
 print "".
 // calcul thrust weight ration TWR
 print "TWR for vtol engine is :" + totalThrust / (ship:mass * g).
-wait 100.
+wait 5.
 clearScreen.
 core:activate.
 
