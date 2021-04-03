@@ -4,6 +4,7 @@
 # MOD-IVA-COCKPIT-MFD (with KOS monitor integred)
 | Version | Supported  |
 | ------- | :---: |
+| KSP 1.11.2  | :white_check_mark: |
 | KSP 1.11.1  | :white_check_mark: |
 | KSP 1.10.1  | :white_check_mark: |
 
