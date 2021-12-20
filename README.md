@@ -2,11 +2,12 @@
 ##### MK1 cockpit (20/12/2021 info this mod is not dead, i'm in formation for new job end date august 2022 i try to restart afert that)
 
 # MOD-IVA-COCKPIT-MFD (with KOS monitor integred)
-| Version | Supported  |
-| ------- | :---: |
-| KSP 1.11.2  | :white_check_mark: |
-| KSP 1.11.1  | :white_check_mark: |
-| KSP 1.10.1  | :white_check_mark: |
+| Version | Supported | comment |
+| ------- | :---: | -------- |
+| KSP 1.12.3  | ❌                  | not compiled yet           |
+| KSP 1.11.2  | :white_check_mark: | not tested (1.12 partools) |
+| KSP 1.11.1  | :white_check_mark: | not tested (1.12 partools) |
+| KSP 1.10.1  | :white_check_mark: | not tested (1.12 partools) |
 
 using a modified mu file from ASET Props (v1.5)
 - ALCORMFD40X20.mu
