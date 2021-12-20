@@ -4,10 +4,11 @@
 # MOD-IVA-COCKPIT-MFD (with KOS monitor integred)
 | Version | Supported | comment |
 | ------- | :---: | -------- |
-| KSP 1.12.3  | ❌                  | not compiled yet           |
+| KSP 1.12.3  |                    | not compiled yet           |
 | KSP 1.11.2  | :white_check_mark: | not tested (1.12 partools) |
 | KSP 1.11.1  | :white_check_mark: | not tested (1.12 partools) |
 | KSP 1.10.1  | :white_check_mark: | not tested (1.12 partools) |
+(tested on KSP 1.12.3 just to see, everything seems to have worked)
 
 using a modified mu file from ASET Props (v1.5)
 - ALCORMFD40X20.mu
