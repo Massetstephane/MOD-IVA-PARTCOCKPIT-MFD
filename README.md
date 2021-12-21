@@ -15,13 +15,14 @@ using a modified mu file from ASET Props (v1.5)
 - MFD60x30.mu
 #### These models and IVA are independent and do not affect the required MODS
 
+> "RasterPropMonitor-v0.31.5" by Mihara (eugene Medvedev), MOARdV, and other contributors licensed under the GNU General Public License (GNU GPL), version 3, revision
+    date 29 June 2007.
+
 > "ASET Props" by Alexustas licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. (licenses/by-nc-sa/3.0/)
-  
+
+> "ASET_Avionics-2.1" by Alexustas licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. (licenses/by-nc-sa/3.0/)
+
 > Near Future Props v0.7.1 by Nertea License (licenses/by-nc-sa/4.0/legalcode)
-
-> DE_IVAExtension by DemonEin licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. (licenses/by-nc-sa/3.0/)
-
-> IVA_ASET_MAKING_HISTORY-1.0 licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. (licenses/by-nc-sa/3.0/)
 
 ## Features
 
