@@ -1,5 +1,5 @@
-  {buttonLabel0} {buttonLabel1} {buttonLabel2} {buttonLabel3}  {buttonLabel4} {buttonLabel5} {buttonLabel6}  
-[#60F8F9][hw]CPU: {currentCPU} - {processorLabel}        {keyboardFlag}{COLOR} [font0]PAGE -[font1][#ffff14ff]2
+  {buttonLabel0} {buttonLabel1} {buttonLabel2} {buttonLabel3} {buttonLabel4} {buttonLabel5} {buttonLabel6}  
+[#60F8F9][hw] CPU: {currentCPU} - [#ff474cff]{processorLabel}        {keyboardFlag}{COLOR} [font0]PAGE -[font1][#ffff14ff]2
 [hw]{l1} 
 [hw]{l2}
 [hw]{l3}

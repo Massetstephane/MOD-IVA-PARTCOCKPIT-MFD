@@ -1,20 +1,20 @@
 [hw][#CEE3F6FF][font0]  RESOURCES ST/TOT[#ffffffff] |  [#CEE3F6FF]TARGET MENU[#ffffffff]  |  [#CEE3F6FF]LANDING MODE[#ffffffff]  | [#CEE3F6FF]CREW / FL.LOG[#ffffffff] |    [#CEE3F6FF]POD  CAMS[#ffffffff]  |   [#CEE3F6FF]EXTRA CAMS[#ffffffff]   |[font2][#c4c8caFF]   STANDBY         ..   	      
 
 
+[@x202][@y13][font1][hw][sup][#33ff33ff]ASET Props (1.5) [#ffffffff]by [font2][#c7c7c7ff][@y12]Alexustas
+
+            [@x-2][#81BEF7FF]««««««««««««««««««
 
 
+     [@y13][@x-8][font1]Powered by  JSI RasterPropMonitor[font0]
+                 [@y12][#81BEF7FF]v {0} $&$ RPMVERSION
+                     
 
-
-
-
-
-                     [#81BEF7FF]««««««««««««««««««[@x-288][#FFFFFFFF]{0}   $&$ STOREDSTRING_2
-[#81BEF7FF]                         {0} $&$STOREDSTRING_0
 			  
-           {1} {0} $&$ STOREDSTRING_1 STOREDSTRING_7
+           
 						
-              Powered by  JSI RasterPropMonitor			  
-[#81BEF7FF]                        v {0} $&$ RPMVERSION						
+              		  
+						
 						
 						
 						
