@@ -4,7 +4,7 @@
 # MOD-IVA-COCKPIT-MFD (with KOS monitor integred)
 | Version | Supported | comment |
 | ------- | :---: | -------- |
-| KSP 1.12.3  |                    | not compiled yet           |
+| KSP 1.12.3  |       ✅             | not compiled -> 1.12.3 yet |
 | KSP 1.11.2  | :white_check_mark: | not tested (1.12 partools) |
 | KSP 1.11.1  | :white_check_mark: | not tested (1.12 partools) |
 | KSP 1.10.1  | :white_check_mark: | not tested (1.12 partools) |
@@ -17,7 +17,7 @@ using a modified mu file from ASET Props (v1.5)
 
 > "ASET Props" by Alexustas licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. (licenses/by-nc-sa/3.0/)
   
-> Near Future Props v0.6.4 by Nertea License (licenses/by-nc-sa/4.0/legalcode)
+> Near Future Props v0.7.1 by Nertea License (licenses/by-nc-sa/4.0/legalcode)
 
 > DE_IVAExtension by DemonEin licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. (licenses/by-nc-sa/3.0/)
 
@@ -35,16 +35,16 @@ ______
 > MODS required
 - ASET_Avionics-2.1
 - ASET_Props-1.5
-- RasterPropMonitor-v0.31.4
-- NearFutureProps_0_6_4
+- RasterPropMonitor-v0.31.5
+- NearFutureProps_0_7_1
 > Optional *(if you want to use the MFDkos, which remains included in the IVAs)*
-- kOS-v1.2.1.0 or greater 
-- kOSPropMonitor-1.7.1.38388 
+- kOS-v1.3.2.0 (tested everything work) 
+- kOSPropMonitor-1.7.2.29290 (tested my KOSRpm Monitor fully functional with program boot manager ok)
 ______
 
 > Supported Mods for module in MFD screen page, (The pages of these modules are already embedded in the cfg file)
 
-|  MODULE    |    TESTED 1.11.1   |
+|  MODULE    |    TESTED 1.12.3   |
 |:---        |        :---:       |
 |- MECHJEB2  | :white_check_mark: |
 |- SCANSAT   |        :x:         |
