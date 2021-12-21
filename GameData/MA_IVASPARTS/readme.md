@@ -13,7 +13,7 @@ This Mod use a modified mu file from RasterPropMonitor-v0.31.5
 - #### Updated MFD (animated buttons, backlight buttons, brightness buttons setup screen, compiled for 1.12.3)
 - #### Mfd page revisited
 - #### MFD specials dedicated to KOS
-- #### IVA and Cockpit for KSP (Work in progress not compiled with for 1.12.3)
+- #### IVA and Cockpit for KSP (Work in progress not compiled with for 1.12.3 for the moment.)
 ______
 
 > Supported Mods for module in MFD screen page, (The pages of these modules are already embedded in the cfg file)
