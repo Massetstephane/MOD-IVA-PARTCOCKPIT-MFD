@@ -2,7 +2,7 @@
 ##### MK1 cockpit
 
 # MOD-IVA-COCKPIT-MFD
-##### Ver. (KSP 1.11.1)
+##### Ver. (KSP 1.12.3)
 
 using a modified mu file from ASET Props (v1.5)
 - ALCORMFD40X20.mu
@@ -11,7 +11,7 @@ using a modified mu file from ASET Props (v1.5)
 
 > "ASET Props" by Alexustas licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. (licenses/by-nc-sa/3.0/)
   
-> Near Future Props v0.6.4 by Nertea License (licenses/by-nc-sa/4.0/legalcode)
+> Near Future Props v0.7.1 by Nertea License (licenses/by-nc-sa/4.0/legalcode)
 
 > DE_IVAExtension by DemonEin licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. (licenses/by-nc-sa/3.0/)
 
@@ -29,10 +29,10 @@ ______
 > MODS required
 - ASET_Avionics-2.1
 - ASET_Props-1.5
-- RasterPropMonitor-v0.31.4
-- kOS-v1.2.1.0 or greater
-- kOSPropMonitor-1.7.1.38388
-- NearFutureProps_0_6_4
+- RasterPropMonitor-v0.31.5
+- kOS-v1.3.2.0 
+- kOSPropMonitor-1.7.2.29290
+- NearFutureProps_0_7_1
 ______
 
 > Supported Mods for module in MFD screen page, (The pages of these modules are already embedded in the cfg file)
