@@ -45,14 +45,14 @@ ______
 
 > Supported Mods for module in MFD screen page, (The pages of these modules are already embedded in the cfg file)
 
-|  MODULE    |    TESTED 1.12.3   |
-|:---        |        :---:       |
-|- MECHJEB2  | :white_check_mark: |
-|- SCANSAT   |        :x:         |
-|- VESSELVIEW|        :x:         |
-|- NAVUTILRPM|        :x:         |
-|- ASTROGATOR|        :x:         |
-|- DPAI_RPM  |        :x:         |
+|  MODULE    |    TESTED 1.12.3   |      version      |
+|:---        |        :---:       |       :---:       |
+|- MECHJEB2  | :white_check_mark: | MechJeb2-2.12.3.0 |
+|- SCANSAT   |        :x:         ||
+|- VESSELVIEW| :white_check_mark: | VesselView-1.12.0-0.8.8.4 |
+|- NAVUTILRPM|        :x:         | NavUtilities_Updated-0.8.0.5 (not working and bug with tweakscale) |
+|- ASTROGATOR|        :x:         ||
+|- DPAI_RPM  |        :x:         ||
 ______
 
 ## INSTALLATION
