@@ -51,7 +51,7 @@ ______
 |- SCANSAT   |        :x:         ||
 |- VESSELVIEW| :white_check_mark: | VesselView-1.12.0-0.8.8.4 [linuxgurugamer](https://github.com/linuxgurugamer/VesselViewer/releases/tag/0.8.8.4)|
 |- NAVUTILRPM|        :x:         | NavUtilities_Updated-0.8.0.5 (not working and bug with tweakscale) |
-|- ASTROGATOR| :white_check_mark: | V0.10.2 [HebaruSan](https://github.com/HebaruSan/Astrogator) |
+|- ASTROGATOR| :white_check_mark: | V0.10.2 [HebaruSan](https://github.com/HebaruSan/Astrogator/releases/tag/v0.10.2) |
 |- DPAI_RPM  |        :x:         ||
 ______
 
