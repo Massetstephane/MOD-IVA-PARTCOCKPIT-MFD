@@ -57,9 +57,11 @@ ______
 
 ## INSTALLATION
 
-- Copy the folder **MA_IVASPARTS** into your KSP GameData directory
+- Copy the folder **MA_IVASPARTS** into your KSP GameData directory (file : MOD-IVA-PARTCOCKPIT-MFD-1.0.0.zip)
 
 - This mod is not compatible with **DE_IVAExtension-v.1.0.2** and **IVA_ASET_MAKING_HISTORY-1.0**
+
+- Copy the folder Script into main ksp ships folder (file : KOS-Scripts(WIP).zip)
 
 ____
 
