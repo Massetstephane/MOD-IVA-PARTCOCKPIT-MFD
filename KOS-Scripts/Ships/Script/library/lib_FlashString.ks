@@ -2,7 +2,7 @@
 // ----              Function For FLASHING TEXT                  ----
 // ------------------------------------------------------------------
 // Copyright © 2021 Masset Stephane 
-// Lic. MIT
+// Lic. Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)
 
 @lazyGlobal off.
 
@@ -41,7 +41,6 @@ function Flashthing                                                             
                 WHEN TIME:SECONDS > SecondsLater then                               // set the delay time                             
                 {
                     set hideS to true.                                              // this enable HideS after delay
-                    wait 0.001.
                 }
             }
         if hideS                                                                    // hide string section
@@ -52,9 +51,9 @@ function Flashthing                                                             
                 WHEN TIME:SECONDS > SecondsLater THEN                               // set the delay time 
                 {			
                     set showS to true.                                              // this enable showS after delay
-                    wait 0.001.
                 }
-            }	
+            }
+        wait 0.001.	
     }
     //
     // ---- one time flash ----
@@ -80,7 +79,6 @@ function Flashthing                                                             
                 WHEN TIME:SECONDS > SecondsLater then
                 {
                     set hideLF to true.
-                    wait 0.001.
                 }
             }
         if hideLF
@@ -91,9 +89,9 @@ function Flashthing                                                             
                 WHEN TIME:SECONDS > SecondsLater THEN 
                 {			
                     set showSLF to true.
-                    wait 0.001.
                 }
             }
+        wait 0.001.
     }
     //
     // ---- one time flash ----
@@ -117,7 +115,6 @@ function Flashthing                                                             
                 WHEN TIME:SECONDS > SecondsLater then
                 {
                     set hidest to true.
-                    wait 0.001.
                 }       
             }
         if hidest
@@ -128,9 +125,9 @@ function Flashthing                                                             
                 when TIME:SECONDS > SecondsLater then
                 {
                     set showst to true.
-                    wait 0.001.
                 }
             }
+        wait 0.001.
     }
     //
     // ---- one time flash ----

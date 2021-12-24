@@ -10,7 +10,7 @@ wait until ship:unpacked.
 wait 6.
 runoncePath ("0:/library/lib_KpmAddons.ks").							       // testing new library (label flag and button function)
 runoncePath ("0:/library/lib_FlashString.ks").                                 // library for animated string
-local but to setKPMapi("B").     		    			                           // object Buttons			  
+local but to setKPMapi("B").     		    			                       // object Buttons			  
 local lab to setKPMapi("L").  						                           // object lab for text and state.
 lab["initLF"](0.06).                                                           // set label test cosmetic start
 // delegate buttons
@@ -29,8 +29,8 @@ cd ("0:/lib_Prog").                                                             
 set ListProg to list().                                                 
 list files in ListProg.                                                         // Store program to liste
 set ProgNumber to ListProg:length().                                            // Number of program
-print "[#ffffffff] - " + "[#33FF00FF]" + ProgNumber + "[#ffffffff] - Active Program Stored".
-print "-------------------------------------------------".
+print "[#ffffffff] - " + "[#33FF00FF]" + ProgNumber + "[#ffffffff] - Active Program Stored (/SCRIPT/lib_Prog)".
+print "-----------------------------------------------------------------------".
 // packing first info line of program
 set contentProgString to list().
 set firsline to "".                                                             // For convert data file to string
@@ -54,7 +54,9 @@ until i=ProgNumber
 }.
 // flashing cursor object
 set indicator to Flashthing("O", " ", 0.5).
-// Main Program
+//
+// ---- Main Loop Boot Program start ----
+//
 until lab["getSTA"](-2) 
 {
     indicator["FlashSTR"](4, current_option+deltaPos).                          // Placing flashing Indicator.
@@ -64,14 +66,20 @@ until lab["getSTA"](-2)
         switch to 1.
         clearScreen.
         runPath (ListProg[current_option]).
+        break. // continue to Exit 
     }
     wait 0.001.  
 }.
-//lab["Reset"]().
-switch to 0.
+// Exit (end boot program if it's not restarted)
+// cleaning labels and buttons
+lab["Reset"]().
+but["clear_dele"]().
+// set the exit screen
 clearScreen.
 print "-Vers :" + core:version + " -Disk : " + core:volume.
 print "-----------------------------------------------------------------------".
+print "".
+//
 // ==== END SCRIPT ====
 // ====  function  ====
 // ---- choice up ----

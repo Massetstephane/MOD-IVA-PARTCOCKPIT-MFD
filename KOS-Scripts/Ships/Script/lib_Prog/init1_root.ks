@@ -1,4 +1,4 @@
-//:Start 0: no actions
+//:Start 0: no actions switch to 0:
 // Copyright © 2021 Masset Stephane 
 // Lic. MIT
 set x to 25.
@@ -14,4 +14,6 @@ print "                                            " at(x,y+4).
 print "__________________________________________________________________________________________".
 print "Root folder scrip 0:".
 switch to 0.
+wait 5.
+// (return to start program and exit) 
 // end file

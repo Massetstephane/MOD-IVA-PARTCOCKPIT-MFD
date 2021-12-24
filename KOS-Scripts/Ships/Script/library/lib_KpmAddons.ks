@@ -2,7 +2,7 @@
 // ----   Library addons:kpm  user Function for LABEL BUTON & FLAG   ----
 // ----------------------------------------------------------------------
 // Copyright © 2021 Masset Stephane 
-// Lic. MIT
+// Lic. Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)
 // setting objects to acces buttons and buttonlabel
 // ---- list MFD buttons index ----
 //  (-1) -> enterButton         : addons:kpm:labels:getstate(-1) get state of button.

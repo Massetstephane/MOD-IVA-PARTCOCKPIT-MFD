@@ -2,10 +2,10 @@
 // ----           Function set Object Moving PARTS               ----
 // ------------------------------------------------------------------
 // Copyright © 2021 Masset Stephane 
-// Lic. MIT
-
+// Lic. Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)
+//
 @lazyGlobal off.
-
+//
 // Main Function Constructor Object PART with info for Part name(kostag), module name, action or event name
 function MovPartOBJ                                                                                         // make object
 {
@@ -62,7 +62,7 @@ function MovPartOBJ                                                             
 		}
 		return Moduf.           
 	}
-
+    //
     // delegate function lexicon
     return lexicon(
         "Move", mvPart@,
