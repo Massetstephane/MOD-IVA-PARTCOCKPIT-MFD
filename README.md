@@ -45,14 +45,14 @@ ______
 
 > Supported Mods for module in MFD screen page, (The pages of these modules are already embedded in the cfg file)
 
-|  MODULE    |    TESTED 1.12.3   |
-|:---        |        :---:       |
-|- MECHJEB2  | :white_check_mark: |
-|- SCANSAT   |        :x:         |
-|- VESSELVIEW|        :x:         |
-|- NAVUTILRPM|        :x:         |
-|- ASTROGATOR|        :x:         |
-|- DPAI_RPM  |        :x:         |
+|  MODULE    |    TESTED 1.12.3   |      version      |
+|:---        |        :---:       |       :---:       |
+|- MECHJEB2  | :white_check_mark: | MechJeb2-2.12.3.0 [sarbian](https://forum.kerbalspaceprogram.com/index.php?/topic/154834-112x-anatid-robotics-mumech-mechjeb-autopilot-2123-23th-august-2021/#comment-2917905) |
+|- SCANSAT   |        :x:         ||
+|- VESSELVIEW| :white_check_mark: | VesselView-1.12.0-0.8.8.4 [linuxgurugamer](https://github.com/linuxgurugamer/VesselViewer/releases/tag/0.8.8.4)|
+|- NAVUTILRPM|        :x:         | NavUtilities_Updated-0.8.0.5 (not working and bug with tweakscale) |
+|- ASTROGATOR| :white_check_mark: | V0.10.2 [HebaruSan](https://github.com/HebaruSan/Astrogator/releases/tag/v0.10.2) |
+|- DPAI_RPM  |        :x:         ||
 ______
 
 ## INSTALLATION
