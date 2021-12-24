@@ -61,7 +61,7 @@ ______
 
 - This mod is not compatible with **DE_IVAExtension-v.1.0.2** and **IVA_ASET_MAKING_HISTORY-1.0**
 
-- Copy the folder Script into main ksp ships folder (file : KOS-Scripts(WIP).zip)
+- For Kos program Copy the folder Script into main ksp ships folder (file : KOS-Scripts(WIP).zip)
 
 ____
 
