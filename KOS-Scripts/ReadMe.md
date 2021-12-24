@@ -23,7 +23,7 @@ Completely inspired by [SMOKETEER](https://github.com/smoketeer/fall) , and his 
 _____
 
 ### INSTALLS
-Copy Folders or scripts in *Ships/Script/* if you want :) , but some program need Kos library 
+Copy Folders or scripts in *Ships/Script/* if you want :) , Kos library included 
 
 ___
 
