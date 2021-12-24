@@ -25,6 +25,7 @@ print "- test core suffixe -".
 print "- test core:mode -".
 print "mode :" + core:mode.
 wait 5.
+// restart boot program selected
 core:activate.
 // end file
 

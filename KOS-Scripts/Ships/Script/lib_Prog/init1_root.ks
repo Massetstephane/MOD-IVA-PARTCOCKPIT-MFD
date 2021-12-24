@@ -1,6 +1,6 @@
 //:Start 0: no actions switch to 0:
 // Copyright © 2021 Masset Stephane 
-// Lic. MIT
+// Lic. Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)
 set x to 25.
 set y to 5. 
 clearscreen.
@@ -15,5 +15,5 @@ print "_________________________________________________________________________
 print "Root folder scrip 0:".
 switch to 0.
 wait 5.
-// (return to start program and exit) 
+// (return to boot program and exit) 
 // end file

@@ -49,6 +49,7 @@ print "".
 print "TWR for vtol engine is :" + totalThrust / (ship:mass * g).
 wait 5.
 clearScreen.
+// restart boot program selected
 core:activate.
 
 

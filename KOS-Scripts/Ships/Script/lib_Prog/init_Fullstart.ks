@@ -19,5 +19,5 @@ print "              " at(x,y+6).
 print "              " at(x,y+7).
 print " ".
 wait 5.
-// (return to start program and exit) 
+// (return to boot program and exit) 
 // end file  
