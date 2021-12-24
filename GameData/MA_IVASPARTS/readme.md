@@ -22,9 +22,9 @@ ______
 |:---|:---|
 |- MECHJEB2| OK|
 |- SCANSAT| NO|
-|- VESSELVIEW| NO|
+|- VESSELVIEW| OK|
 |- NAVUTILRPM| NO|
-|- ASTROGATOR| NO|
+|- ASTROGATOR| OK|
 |- DPAI_RPM| NO|
 ______
 
