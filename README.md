@@ -5,9 +5,9 @@
 | Version | Supported | comment |
 | ------- | :---: | -------- |
 | KSP 1.12.3  |       ✅             | not full compiled -> 1.12.3 |
-| KSP 1.11.2  | :white_check_mark: | not tested (1.12 partools) |
-| KSP 1.11.1  | :white_check_mark: | not tested (1.12 partools) |
-| KSP 1.10.1  | :white_check_mark: | not tested (1.12 partools) |
+| KSP 1.11.2  | ❗ | not tested (1.12 partools) |
+| KSP 1.11.1  | ❗ | not tested (1.12 partools) |
+| KSP 1.10.1  | ❗ | not tested (1.12 partools) |
 (tested on KSP 1.12.3 just to see, everything seems to have worked)
 
 using a modified mu file from RasterPropMonitor-v0.31.5
@@ -43,8 +43,8 @@ ______
 - kOSPropMonitor-1.7.2.29290 (tested my KOSRpm Monitor fully functional with program boot manager ok)
 ______
 
-> Supported Mods for module in MFD screen page, (The pages of these modules are already embedded in the cfg file)
-> For mod using message "sofware not installed", other mod installed by ModuleManager cfg files in this mod. 
+> Supported Mods for module in MFD screen page, (The pages of these modules are already embedded in the cfg file
+> For mod using message "sofware not installed"), other mod installed by ModuleManager cfg files in this mod. 
 
 |  MODULE    |    TESTED 1.12.3   |      version      |
 |:---        |        :---:       |       :---:       |
