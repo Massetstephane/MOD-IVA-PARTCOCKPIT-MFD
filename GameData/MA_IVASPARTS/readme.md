@@ -6,24 +6,16 @@ This Mod use a modified mu file from RasterPropMonitor-v0.31.5
 - MFD60x30.mu
 
 #### These models and IVA are independent and do not affect the required MODS
-
-## Features
-
-- #### This MODS give Full IVA and Cockpit PART using ASET and JSI RasterPropMonitor
-- #### Updated MFD (animated buttons, backlight buttons, brightness buttons setup screen, compiled for 1.12.3)
-- #### Mfd page revisited
-- #### MFD specials dedicated to KOS
-- #### IVA and Cockpit for KSP (Work in progress not compiled with for 1.12.3 for the moment.)
 ______
 
-| MODULE | TESTED|
-|:---|:---|
-|- MECHJEB2| OK|
-|- SCANSAT| NO|
-|- VESSELVIEW| OK|
-|- NAVINSTRUMENTS| OK|
-|- ASTROGATOR| OK|
-|- DPAI_RPM| NO|
+|    MODULE       | ADDITION |
+|:---             |:---      |
+| MECHJEB2       | page texte menus MJ/SAS/ASTR section button |
+| SCANSAT        | NO |
+| VESSELVIEW     | is assigned to a single button |
+| NAVINSTRUMENTS | ADD a small visual indicator (green rectangle) on screen to indicate the functional buttons of the mod textureInterlayURL function the mod is not modified.|
+| ASTROGATOR     | page texte menus MJ/SAS/ASTR section button |
+| DPAI_RPM       | NO|
 ______
 
 ## INSTALLATION
