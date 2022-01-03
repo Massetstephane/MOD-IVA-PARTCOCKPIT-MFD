@@ -19,4 +19,4 @@
 
 -[hw]VERSION [/hw]RPM v{0} $&$ RPMVERSION            
              
-[font1][hw][#ffffffff]   KSP 1.11.1 + Breaking Ground Expansion + Making History Expansion
+[font1][hw][#ffffffff]   KSP 1.12.3 + Breaking Ground Expansion + Making History Expansion

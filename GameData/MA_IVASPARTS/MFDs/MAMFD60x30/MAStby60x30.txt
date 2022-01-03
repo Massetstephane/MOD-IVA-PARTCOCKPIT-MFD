@@ -1,31 +1,32 @@
 [hw][#CEE3F6FF][font0]  RESOURCES ST/TOT[#ffffffff] |  [#CEE3F6FF]TARGET MENU[#ffffffff]  |  [#CEE3F6FF]LANDING MODE[#ffffffff]  | [#CEE3F6FF]CREW / FL.LOG[#ffffffff] |    [#CEE3F6FF]POD  CAMS[#ffffffff]  |   [#CEE3F6FF]EXTRA CAMS[#ffffffff]   |[font2][#c4c8caFF]   STANDBY         ..   	      
 
 
-[@x202][@y13][font1][hw][sup][#33ff33ff]ASET Props (1.5) [#ffffffff]by [font2][#c7c7c7ff][@y12]Alexustas
 
-            [@x-2][#81BEF7FF]««««««««««««««««««
+[@x245][font1][sup][#33ff33ff]ASET Props (1.5) [#ffffffff][font0][#ffffffff]by [font2][#c7c7c7ff]Alexustas
 
 
-     [@y13][@x-8][font1]Powered by  JSI RasterPropMonitor[font0]
-                 [@y12][#81BEF7FF]v {0} $&$ RPMVERSION
-                     
+[@x240][@y-5][#81BEF7FF]««««««««««««««««««««««««««««««
 
-			  
-           
-						
-              		  
-						
-						
-						
-						
-						
-   [hw][#ffffffc8][font1][sup]_[/sup]MechJeb2    charged : {0:"[font2][#01ff07FF]YES";;"[font0][#fffffffa]NO"} $&$ ISLOADED_MECHJEB2
-   [hw][#ffffffc8][font1][sup]_[/sup]SCANsat     charged : {0:"[font2][#01ff07FF]YES";;"[font0][#fffffffa]NO"} $&$ ISLOADED_SCANSAT
-   [hw][#ffffffc8][font1][sup]_[/sup]VesselView  charged : {0:"[font2][#01ff07FF]YES";;"[font0][#fffffffa]NO"} $&$ ISLOADED_VESSELVIEW
-   [hw][#ffffffc8][font1][sup]_[/sup]NavUtilRPM  charged : {0:"[font2][#01ff07FF]YES";;"[font0][#fffffffa]NO"} $&$ ISLOADED_NAVUTILRPM  
-   [hw][#ffffffc8][font1][sup]_[/sup]Astrogator  charged : {0:"[font2][#01ff07FF]YES";;"[font0][#fffffffa]NO"} $&$ ISLOADED_ASTROGATOR
-   [hw][#ffffffc8][font1][sup]_[/sup]DPAI_RPM    charged : {0:"[font2][#01ff07FF]YES";;"[font0][#fffffffa]NO"} $&$ ISLOADED_DPAI_RPM						
 
+
+[@x230][@y-17][font1]Powered by  JSI RasterPropMonitor[font0]
+
+[@x369][@y-22][#81BEF7FF]v {0} $&$ RPMVERSION
+[@y0]						
 						
 						
+       [@+9][#ffffffc8][font1][sup]_[/sup]MechJeb2       [hw]charged :[/hw] {0:"[font2][#01ff07FF]YES";;"[font0][#fffffffa]NO"} $&$ ISLOADED_MECHJEB2
+       [@y+11][#ffffffc8][font1][sup]_[/sup]SCANsat        [hw]charged :[/hw] {0:"[font2][#01ff07FF]YES";;"[font0][#fffffffa]NO"} $&$ ISLOADED_SCANSAT
+       [@y+22][#ffffffc8][font1][sup]_[/sup]VesselView     [hw]charged :[/hw] {0:"[font2][#01ff07FF]YES";;"[font0][#fffffffa]NO"} $&$ ISLOADED_VESSELVIEW
+       [@y+33][#ffffffc8][font1][sup]_[/sup]NavInstruments [hw]charged :[/hw] {0:"[font2][#01ff07FF]YES";;"[font0][#fffffffa]NO"} $&$ ISLOADED_NAVUTILRPM
+       [@y+44][#ffffffc8][font1][sup]_[/sup]Astrogator     [hw]charged :[/hw] {0:"[font2][#01ff07FF]YES";;"[font0][#fffffffa]NO"} $&$ ISLOADED_ASTROGATOR
+       [@y+55][#ffffffc8][font1][sup]_[/sup]DPAI_RPM       [hw]charged :[/hw] {0:"[font2][#01ff07FF]YES";;"[font0][#fffffffa]NO"} $&$ ISLOADED_DPAI_RPM						
+
+
+
+
+
+
+
+
 [hw][#CEE3F6FF][font0] ORBIT+ORBITDISPLAY[#ffffffff]| [#CEE3F6FF]ORBIT+MAP/MAP[#ffffffff] |    [#CEE3F6FF]DOCKING[#ffffffff]     |  [#CEE3F6FF]VESSEL VIEW[#ffffffff]  |
