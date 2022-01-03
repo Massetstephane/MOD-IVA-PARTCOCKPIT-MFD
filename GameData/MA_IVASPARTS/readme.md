@@ -16,14 +16,12 @@ This Mod use a modified mu file from RasterPropMonitor-v0.31.5
 - #### IVA and Cockpit for KSP (Work in progress not compiled with for 1.12.3 for the moment.)
 ______
 
-> Supported Mods for module in MFD screen page, (The pages of these modules are already embedded in the cfg file)
-
 | MODULE | TESTED|
 |:---|:---|
 |- MECHJEB2| OK|
 |- SCANSAT| NO|
 |- VESSELVIEW| OK|
-|- NAVUTILRPM| NO|
+|- NAVINSTRUMENTS| OK|
 |- ASTROGATOR| OK|
 |- DPAI_RPM| NO|
 ______
