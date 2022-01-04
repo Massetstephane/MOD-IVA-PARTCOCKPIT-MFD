@@ -1,7 +1,7 @@
 ![MK1 cockpit](https://i.imgur.com/CB9zHTRh.png)
 ##### MK1 cockpit (20/12/2021 info this mod is not dead, i'm in formation for new job end date august 2022 i try to restart after that)
 
-# (WIP) MOD-IVA-COCKPIT-MFD (with KOS monitor integred) 1.0
+# (WIP) MOD-IVA-COCKPIT-MFD (with KOS monitor integred) 
 | Version | Supported | comment |
 | ------- | :---: | -------- |
 | KSP 1.12.3  |       ✅             | not full compiled -> 1.12.3 |
