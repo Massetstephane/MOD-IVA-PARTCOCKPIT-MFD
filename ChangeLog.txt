@@ -1,0 +1,17 @@
+- To come up -
+  Changing position front prop light in IVAS because kerbal Facecam are dark even when the light is on in IVA 
+  
+ _______________________________________________________________________________________________________________________________________________________________________________
+ 
+- INFOS VERSIONS ChangeLog -
+
+1.0.1
+  Release compiled with Partools 1.12x - Unity 2019.4.18f1 (64-bit) as posted on the Kerbal space program forum for KSP 1.12.3
+  Not tested on previous version of KSP
+  MFD compiled(ok), IVAS and part not yet
+  Changing the integration in mdf for NavInstruments by patch file (modulemanager), added visual information in mfd for HSI and AI hud
+  finished the MFD60x30 startup screen, MFD40x20 have all page text modified (menus buttonA information added for NavInstruments)
+  
+1.0.0
+  First release and test function in github
+  premiére version et test dans github
