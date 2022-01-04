@@ -1,0 +1,4 @@
+- All MFD compiled in blender 3.0 with the last ParTools perfects.
+- For Photoshop (license 2022) the DDS Nvidia pluggins work too. (tested DDS export MFD60x30 for screen starput dds)
+- i'm happy... 😊
+- 
