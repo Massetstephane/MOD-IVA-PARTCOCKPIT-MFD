@@ -1,13 +1,13 @@
 ![MK1 cockpit](https://i.imgur.com/CB9zHTRh.png)
 ##### MK1 cockpit (20/12/2021 info this mod is not dead, i'm in formation for new job end date august 2022 i try to restart after that)
 
-# MOD-IVA-COCKPIT-MFD (with KOS monitor integred) 1.0
+# (WIP) MOD-IVA-COCKPIT-MFD (with KOS monitor integred) 1.0
 | Version | Supported | comment |
 | ------- | :---: | -------- |
 | KSP 1.12.3  |       ✅             | not full compiled -> 1.12.3 |
-| KSP 1.11.2  | :white_check_mark: | not tested (1.12 partools) |
-| KSP 1.11.1  | :white_check_mark: | not tested (1.12 partools) |
-| KSP 1.10.1  | :white_check_mark: | not tested (1.12 partools) |
+| KSP 1.11.2  | ❗ | not tested (1.12 partools) |
+| KSP 1.11.1  | ❗ | not tested (1.12 partools) |
+| KSP 1.10.1  | ❗ | not tested (1.12 partools) |
 (tested on KSP 1.12.3 just to see, everything seems to have worked)
 
 using a modified mu file from RasterPropMonitor-v0.31.5
@@ -43,23 +43,26 @@ ______
 - kOSPropMonitor-1.7.2.29290 (tested my KOSRpm Monitor fully functional with program boot manager ok)
 ______
 
-> Supported Mods for module in MFD screen page, (The pages of these modules are already embedded in the cfg file)
+> Supported Mods for module in MFD screen page, (The pages of these modules are already embedded in the cfg file
+> For mod using message "sofware not installed"), other mod installed by ModuleManager cfg files in this mod. 
 
 |  MODULE    |    TESTED 1.12.3   |      version      |
 |:---        |        :---:       |       :---:       |
 |- MECHJEB2  | :white_check_mark: | MechJeb2-2.12.3.0 [sarbian](https://forum.kerbalspaceprogram.com/index.php?/topic/154834-112x-anatid-robotics-mumech-mechjeb-autopilot-2123-23th-august-2021/#comment-2917905) |
 |- SCANSAT   |        :x:         ||
 |- VESSELVIEW| :white_check_mark: | VesselView-1.12.0-0.8.8.4 [linuxgurugamer](https://github.com/linuxgurugamer/VesselViewer/releases/tag/0.8.8.4)|
-|- NAVUTILRPM|        :x:         | NavUtilities_Updated-0.8.0.5 (not working and bug with tweakscale) |
+|- NAVUTILRPM|        ✅         | NavUtilities_Updated-0.8.0.5 [linuxgurugamer](https://forum.kerbalspaceprogram.com/index.php?/topic/204929-112x-navutilities-continued-ft-hsi-instrument-landing-system/) |
 |- ASTROGATOR| :white_check_mark: | V0.10.2 [HebaruSan](https://github.com/HebaruSan/Astrogator/releases/tag/v0.10.2) |
 |- DPAI_RPM  |        :x:         ||
 ______
 
 ## INSTALLATION
 
-- Copy the folder **MA_IVASPARTS** into your KSP GameData directory
+- Copy the folder **MA_IVASPARTS** into your KSP GameData directory (file : MOD-IVA-PARTCOCKPIT-MFD-1.0.0.zip)
 
 - This mod is not compatible with **DE_IVAExtension-v.1.0.2** and **IVA_ASET_MAKING_HISTORY-1.0**
+
+- For Kos program Copy the folder Script into main ksp ships folder (file : KOS-Scripts(WIP).zip)
 
 ____
 
