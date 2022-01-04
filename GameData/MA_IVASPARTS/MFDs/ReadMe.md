@@ -1,4 +1,4 @@
 - All MFD compiled in blender 3.0 with the last ParTools perfects.
 - For Photoshop (license 2022) the DDS Nvidia pluggins work too. (tested DDS export MFD60x30 for screen startut dds file)
 - i'm happy... 😊
-- NavInstall.cfg is the patch for NavInstruments mod and a big thank to [linuxgurugamer](https://github.com/linuxgurugamer) to maintain it. love this module in mfd.
+- NavInsInstall.cfg is the patch for NavInstruments mod and a big thank to [linuxgurugamer](https://github.com/linuxgurugamer) to maintain it. love this module in mfd.
