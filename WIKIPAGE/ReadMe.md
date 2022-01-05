@@ -1,1 +1,1 @@
-*porut stocker des vidéos et images
+*pour stocker des vidéos et images
