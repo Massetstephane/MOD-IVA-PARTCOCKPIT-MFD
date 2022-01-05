@@ -1,4 +1,3 @@
-git rm --cached <README.md>
 ![MK1 cockpit](https://i.imgur.com/CB9zHTRh.png)
 ##### MK1 cockpit (20/12/2021 info this mod is not dead, i'm in formation for new job end date august 2022 i try to restart after that)
 
