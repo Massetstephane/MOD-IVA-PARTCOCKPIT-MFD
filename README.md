@@ -50,7 +50,7 @@ ______
 |  MODULE    |    TESTED 1.12.3   |      version      |
 |:---        |        :---:       |       :---:       |
 |- MECHJEB2  | :white_check_mark: | MechJeb2-2.12.3.0 [sarbian](https://forum.kerbalspaceprogram.com/index.php?/topic/154834-112x-anatid-robotics-mumech-mechjeb-autopilot-2123-23th-august-2021/#comment-2917905) |
-|- SCANSAT   |        :x:         ||
+|- SCANsat   |        ✅         | SCANsat-v20.4 [S-C-A-N](https://github.com/S-C-A-N/SCANsat) |
 |- VESSELVIEW| :white_check_mark: | VesselView-1.12.0-0.8.8.6 [linuxgurugamer](https://github.com/linuxgurugamer/VesselViewer/releases/tag/0.8.8.4)|
 |- NAVUTILRPM|        ✅         | NavUtilities_Updated-0.8.0.5 [linuxgurugamer](https://forum.kerbalspaceprogram.com/index.php?/topic/204929-112x-navutilities-continued-ft-hsi-instrument-landing-system/) |
 |- ASTROGATOR| :white_check_mark: | V0.10.2 [HebaruSan](https://github.com/HebaruSan/Astrogator/releases/tag/v0.10.2) |
