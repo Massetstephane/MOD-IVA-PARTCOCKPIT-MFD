@@ -1,5 +1,5 @@
 # --- KOS Script (WIP) ---
-Copyright (C) Masset Stephane 
+(C) Copyright 2022, Masset Stephane 
 > script created for use with MFDkos
 - I created a function library to interact with the functions of the MFD, Thanks to the KPM mod.
   it is possible to use and program functions with the MFD ASET The new MFDkos is configured to display label
