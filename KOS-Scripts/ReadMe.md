@@ -1,4 +1,5 @@
 # --- KOS Script (WIP) ---
+Copyright (C) Masset Stephane 
 > script created for use with MFDkos
 - I created a function library to interact with the functions of the MFD, Thanks to the KPM mod.
   it is possible to use and program functions with the MFD ASET The new MFDkos is configured to display label
@@ -28,5 +29,5 @@ Copy Folders or scripts in *Ships/Script/* if you want :) , Kos library included
 ___
 
 ### LICENCE
-Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)
+GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007
    
