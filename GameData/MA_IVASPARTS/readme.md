@@ -25,4 +25,4 @@ ______
 - This mod is not compatible with **DE_IVAExtension-v.1.0.2** and **IVA_ASET_MAKING_HISTORY-1.0**
 
 ## LICENCE
- Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)
+GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007
