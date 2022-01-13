@@ -11,6 +11,7 @@
   MFD compiled(ok), IVAS and part not yet
   Changing the integration in mdf for NavInstruments by patch file (modulemanager), added visual information in mfd for HSI and AI hud
   finished the MFD60x30 startup screen, MFD40x20 have all page text modified (menus buttonA information added for NavInstruments)
+  Correction on MM patch for NavInstruments, to not have NavInstruments mod in Kos MFD :)
   
 1.0.0
   First release and test function in github
