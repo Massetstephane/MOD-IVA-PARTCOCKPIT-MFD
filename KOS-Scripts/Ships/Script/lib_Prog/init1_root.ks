@@ -1,6 +1,6 @@
 //:Start 0: no actions switch to 0:
-// Copyright © 2021 Masset Stephane 
-// Lic. Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)
+// Copyright © 2022 Masset Stephane 
+// GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007
 set x to 25.
 set y to 5. 
 clearscreen.

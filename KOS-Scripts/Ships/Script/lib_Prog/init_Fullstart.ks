@@ -1,6 +1,6 @@
 //:Full start SAS & Engine & Break ON (0:)
-// Copyright © 2021 Masset Stephane 
-// Lic. Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)
+// Copyright © 2022 Masset Stephane 
+// GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007
 parameter x is 25, y is 5.
 clearscreen.
 switch to 0.

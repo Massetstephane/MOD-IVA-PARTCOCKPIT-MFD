@@ -5,8 +5,8 @@
 // Main pidloop Parameter are saved in corresponding aircraft file.txt in a special data folder
 // Testing PIdloop setting using the Ziegler-Nichols method (wiki kos)
 //
-// Copyright © 2021 Masset Stephane 
-// Lic. Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)
+// Copyright © 2022 Masset Stephane 
+// GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007
 //
 parameter inpalt is 0,  		                       								// base height if nothing enter
 		  vTn 	 is "VTOL".															// Default name tag for motor (search)

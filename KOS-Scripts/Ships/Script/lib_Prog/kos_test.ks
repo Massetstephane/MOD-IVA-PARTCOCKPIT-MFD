@@ -1,6 +1,6 @@
 //:Test to trying acess kos module in ship
-// Copyright © 2021 Masset Stephane 
-// Lic. Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)
+// Copyright © 2022 Masset Stephane 
+// GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007
 clearScreen.
 set kospart to core:element.
 print "- kos:element -".
