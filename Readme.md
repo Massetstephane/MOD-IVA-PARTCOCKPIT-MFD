@@ -37,7 +37,7 @@ ______
 > MODS required
 - ASET_Avionics-2.1
 - ASET_Props-1.5
-- RasterPropMonitor-v0.31.5
+- RasterPropMonitor-v0.31.6
 - NearFutureProps_0_7_1
 > Optional *(if you want to use the MFDkos, which remains included in the IVAs)*
 - kOS-v1.3.2.0 (tested everything work) 
