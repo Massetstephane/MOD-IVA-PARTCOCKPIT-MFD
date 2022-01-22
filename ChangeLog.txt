@@ -5,6 +5,9 @@
  
 - INFOS VERSIONS ChangeLog -
 
+1.0.2
+  Changing syntax error in cfg file (ModuleManager) missing "S" for NEEDS tag
+
 1.0.1
   Release compiled with Partools 1.12x - Unity 2019.4.18f1 (64-bit) as posted on the Kerbal space program forum for KSP 1.12.3
   Not tested on previous version of KSP
