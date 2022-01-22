@@ -25,6 +25,9 @@ using a modified mu file from RasterPropMonitor-v0.31.5
 
 > Near Future Props v0.7.1 by Nertea License (licenses/by-nc-sa/4.0/legalcode)
 
+##
+## [Wiki page](https://github.com/Massetstephane/MOD-IVA-PARTCOCKPIT-MFD/wiki)
+
 ## Features
 
 - #### This MODS give Full IVA and Cockpit PART using ASET and JSI RasterPropMonitor
